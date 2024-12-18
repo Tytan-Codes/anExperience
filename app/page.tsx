@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -96,7 +98,9 @@ export default function Home() {
           n
         </motion.span>
       </div>
-      <div className="flex flex-row w-full h-2/6">s</div>
+      <div className="flex flex-row w-full h-2/6">
+      
+      </div>
     </div>
   );
 }
