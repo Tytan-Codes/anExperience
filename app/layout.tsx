@@ -1,15 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local';
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const humane = localFont({
+  src: './fonts/Humane-VF.ttf',
+  variable: '--font-humane',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const manuscribe = localFont({
+  src: [
+    {
+      path: './fonts/ManuscribeFree-Regular.otf',
+      style: 'normal',
+    },
+    {
+      path: './fonts/ManuscribeFree-Italic.otf',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-manuscribe',
+});
+
+const glusp = localFont({
+  src: './fonts/OTF® Glusp.ttf',
+  variable: '--font-glusp',
+});
+
+const emberly = localFont({
+  src: './fonts/CYR_CT_OP_Emberly Regular [wdth,wght]-VF.ttf',
+  variable: '--font-emberly',
 });
 
 export const metadata: Metadata = {
@@ -25,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${humane.variable} ${manuscribe.variable} ${glusp.variable} ${emberly.variable} antialiased`}
       >
         {children}
       </body>
