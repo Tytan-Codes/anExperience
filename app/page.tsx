@@ -98,8 +98,16 @@ export default function Home() {
           n
         </motion.span>
       </div>
-      <div className="flex flex-row w-full h-2/6">
-      
+      <div className="flex flex-row w-full h-2/6 items-center justify-center ">
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
+      >
+        <button className="mt-4 inline-block border border-white px-8 py-2 text-sm tracking-wider transition-colors hover:bg-zinc-400 hover:text-white text-white">
+          Start experience
+        </button>
+      </motion.div>
       </div>
     </div>
   );
