@@ -9,3 +9,6 @@ cd into me
 bun i
 bun dev
 ```
+#LICENCE
+
+Attribution-NoDerivatives 4.0 International
