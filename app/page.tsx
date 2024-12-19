@@ -134,7 +134,7 @@ export default function Home() {
             >
               <button 
                 onClick={handleClick}
-                className="mt-4 inline-block border border-white px-8 py-2 text-sm tracking-wider transition-colors hover:bg-zinc-400 hover:text-white text-white"
+                className="mt-4 inline-block border font-emberly italic  text-[1.5rem] border-white px-8 py-2 text-sm tracking-wider transition-colors hover:bg-zinc-400 hover:text-white text-white"
               >
                 Start experience
               </button>
