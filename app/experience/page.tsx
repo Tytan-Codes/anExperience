@@ -14,7 +14,7 @@ export default function Experience() {
   
   const tytanY = useTransform(scrollYProgress, [0, 0.3], [0, 0]);
   const tytanX = useTransform(scrollYProgress, [0, 0.3], [0, -800]);
-
+  const tytanScale = useTransform(scrollYProgress, [0, 0.3], [1, 2.5]);
   return (
     <div className="flex flex-col bg-zinc-900">
         <div className="flex flex-col w-screen h-screen p-3">
@@ -45,7 +45,7 @@ export default function Experience() {
                     <motion.h1 
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    style={{ y: tytanY, x: tytanX }}
+                    style={{ y: tytanY, x: tytanX, scale: tytanScale }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
                     className="text-white text-[7rem] font-extrabold font-width-extended tracking-widest font-emberly italic ">
