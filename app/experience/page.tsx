@@ -1,20 +1,20 @@
 'use client'
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform, easeOut, easeInOut } from "motion/react";
 
 export default function Experience() {
   // Add scroll progress tracking
   const { scrollYProgress } = useScroll();
   
   // Create transform values for each text element with both X and Y
-  const helloY = useTransform(scrollYProgress, [0, 0.3], [0, -300]);
-  const helloX = useTransform(scrollYProgress, [0, 0.3], [0, 300]);
+  const helloY = useTransform(scrollYProgress, [0, 0.3], [0, -300], { ease: easeOut });
+  const helloX = useTransform(scrollYProgress, [0, 0.3], [0, 300], { ease: easeOut });
   
-  const imY = useTransform(scrollYProgress, [0, 0.3], [0, -700]);
-  const imX = useTransform(scrollYProgress, [0, 0.3], [0, 700]);
+  const imY = useTransform(scrollYProgress, [0, 0.3], [0, -700], { ease: easeInOut });
+  const imX = useTransform(scrollYProgress, [0, 0.3], [0, 700], { ease: easeInOut });
   
-  const tytanY = useTransform(scrollYProgress, [0, 0.3], [0, 0]);
-  const tytanX = useTransform(scrollYProgress, [0, 0.3], [0, -800]);
-  const tytanScale = useTransform(scrollYProgress, [0, 0.3], [1, 2.5]);
+  const tytanY = useTransform(scrollYProgress, [0, 0.3], [0, 0], { ease: easeInOut });
+  const tytanX = useTransform(scrollYProgress, [0, 0.3], [0, -800], { ease: easeInOut });
+  const tytanScale = useTransform(scrollYProgress, [0, 0.3], [1, 2.5], { ease: easeInOut });
   return (
     <div className="flex flex-col bg-zinc-900">
         <div className="flex flex-col w-screen h-screen p-3">
