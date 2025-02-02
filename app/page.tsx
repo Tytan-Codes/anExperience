@@ -14,7 +14,7 @@ export default function Home() {
     // Wait for animation to complete before navigation
     setTimeout(() => {
       router.push('/experience');
-    }, 1000); // Adjust this timing to match your exit animation duration
+    }, 1500); // Adjust this timing to match your exit animation duration
   };
 
   return (
@@ -130,7 +130,7 @@ export default function Home() {
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 1.5 }}
             >
               <button 
                 onClick={handleClick}

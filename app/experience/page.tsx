@@ -6,11 +6,11 @@ export default function Experience() {
   const { scrollYProgress } = useScroll();
   
   // Create transform values for each text element with both X and Y
-  const helloY = useTransform(scrollYProgress, [0, 0.3], [0, -300], { ease: easeOut });
-  const helloX = useTransform(scrollYProgress, [0, 0.3], [0, 300], { ease: easeOut });
+  const helloY = useTransform(scrollYProgress, [0, 0.3], [0, -0], { ease: easeOut });
+  const helloX = useTransform(scrollYProgress, [0, 0.3], [0, 500], { ease: easeOut });
   
-  const imY = useTransform(scrollYProgress, [0, 0.3], [0, -700], { ease: easeInOut });
-  const imX = useTransform(scrollYProgress, [0, 0.3], [0, 700], { ease: easeInOut });
+  const imY = useTransform(scrollYProgress, [0, 0.3], [0, -500], { ease: easeInOut });
+  const imX = useTransform(scrollYProgress, [0, 0.3], [0, 0], { ease: easeInOut });
   
   const tytanY = useTransform(scrollYProgress, [0, 0.3], [0, 0], { ease: easeInOut });
   const tytanX = useTransform(scrollYProgress, [0, 0.3], [0, -800], { ease: easeInOut });
