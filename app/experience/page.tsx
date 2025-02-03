@@ -59,6 +59,9 @@ export default function Experience() {
                 </div>
             </div>
         </div>
+        <div className="w-full flex justify-center">
+          <div className="h-32 w-0.5 bg-white/20 rounded-full" />
+        </div>
         <motion.div
          initial={{ opacity: 0 }}
          animate={{ opacity: 1 }}
@@ -66,7 +69,7 @@ export default function Experience() {
          transition={{ duration: 0.6, ease: "easeOut" }}
 
          className="flex flex-col w-full h-screen p-3">
-            <div className="flex flex-col h-1/3 w-1/3 border-2 border-white">
+            <div className="flex flex-col h-1/2 w-1/2 border-2 border-white">
 
 
             </div>
