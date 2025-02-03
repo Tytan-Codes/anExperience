@@ -16,8 +16,8 @@ export default function Experience() {
   const tytanX = useTransform(scrollYProgress, [0, 0.3], [0, -800], { ease: easeInOut });
   const tytanScale = useTransform(scrollYProgress, [0, 0.3], [1, 2.5], { ease: easeInOut });
   return (
-    <div className="flex flex-col bg-zinc-900">
-        <div className="flex flex-col w-screen h-screen p-3">
+    <div className="flex flex-col bg-zinc-900 overflow-x-hidden">
+        <div className="flex flex-col w-full h-screen p-3">
             <div className="">
                 <div className="flex flex-start">
                     <motion.h1 
@@ -54,7 +54,7 @@ export default function Experience() {
                 </div>
             </div>
         </div>
-        <div className="flex flex-col w-screen h-screen">
+        <div className="flex flex-col w-full h-screen">
             
         </div>
     </div>
