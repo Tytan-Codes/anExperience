@@ -59,9 +59,18 @@ export default function Experience() {
                 </div>
             </div>
         </div>
-        <div className="flex flex-col w-full h-screen">
-            
-        </div>
+        <motion.div
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         exit={{ opacity: 0 }}
+         transition={{ duration: 0.6, ease: "easeOut" }}
+
+         className="flex flex-col w-full h-screen p-3">
+            <div className="flex flex-col h-1/3 w-1/3 border-2 border-white">
+
+
+            </div>
+        </motion.div>
     </div>
   )
 }
