@@ -64,9 +64,13 @@ export default function Experience() {
                 </div>
             </div>
         </div>
+
+
         <div className="w-full flex justify-center">
           <div className="h-32 w-0.5 bg-white/20 rounded-full" />
         </div>
+
+
         <div className="flex flex-col w-full h-screen p-3">
             <motion.div
             ref={secondSectionRef}
@@ -76,27 +80,42 @@ export default function Experience() {
             className="flex flex-col h-1/2 w-1/2 border-2 border-white
             ">
                 <div className="flex flex-row h-1/2 w-full">
-                    <div className="flex flex-col h-full w-1/2 m-5 text-3xl border-2 border-white font-glusp text-white justify-center items-center">
+                    <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: isInView ? 1 : 0 }}
+                    transition={{delay: 0.6, duration: 0.6, ease: "easeOut" }}
+                    className="flex flex-col h-full w-1/2 m-5 text-3xl border-2 border-white font-glusp text-white justify-center items-center">
                         This Website
-                    </div>
-                    <div className="flex flex-col h-full w-1/2 m-5 text-[1.5rem] font-emberly text-white ">
-                        A modern portfolio crafted with Next.js and Motion, featuring fluid animations and elegant typography. The site combines custom fonts, scroll-based interactions, and seamless transitions to create an engaging user experience. Built with precision using TypeScript and TailwindCSS, it demonstrates the perfect blend of technical excellence and aesthetic design.
-                    </div>
-                    
+                    </motion.div>
 
+                    <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: isInView ? 1 : 0 }}
+                    transition={{delay: 1.2, duration: 0.6, ease: "easeOut" }}
+                    className="flex flex-col h-full w-1/2 m-5 text-[1.5rem] font-emberly text-white ">
+                        A modern portfolio crafted with Next.js and Motion, featuring fluid animations and elegant typography. The site combines custom fonts, scroll-based interactions, and seamless transitions to create an engaging user experience. Built with precision using TypeScript and TailwindCSS, it demonstrates the perfect blend of technical excellence and aesthetic design.
+                    </motion.div>
                 </div>
-                <div className="flex flex-col text-white w-full h-full m-5 mt-8 font-emberly font-bold ">
+                
+                <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isInView ? 1 : 0 }}
+                transition={{delay: 1.8, duration: 0.6, ease: "easeOut" }}
+                className="flex flex-col text-white w-full h-full m-5 mt-8 font-emberly font-bold ">
                         <span className="text-4xl">Processess: </span>
                         <span className="text-2xl">
                             NextJS 15 with App Router with Turbopack,
                             Bun,
                             TailwindCSS,
                             TypeScript,
+
                             Motion Framer,
                             Shadcn UI
                             
                         </span>
-                </div>
+                </motion.div>
+                
+
 
 
 
@@ -104,11 +123,6 @@ export default function Experience() {
 
 
             </motion.div>
-        </div>
-
-        <div className="w-full h-1/3 flex justify-center">
-
-          footer
         </div>
     </div>
 
