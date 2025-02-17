@@ -14,7 +14,7 @@ export default function Home() {
     // Wait for animation to complete before navigation
     setTimeout(() => {
       router.push('/experience');
-    }, 1500); // Adjust this timing to match your exit animation duration
+    }, 1200); // Adjust this timing to match your exit animation duration
   };
 
   return (
@@ -77,7 +77,7 @@ export default function Home() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
               className="text-white text-[18rem] font-weight-black italic"
             >
-              w
+              c
             </motion.span>
             <motion.span 
               initial={{ y: 100, opacity: 0 }}
@@ -86,7 +86,7 @@ export default function Home() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
               className="text-white text-[18rem] font-emberly italic"
             >
-              i
+              o
             </motion.span>
             <motion.span 
               initial={{ y: 100, opacity: 0 }}
@@ -95,7 +95,7 @@ export default function Home() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
               className="text-white text-[18rem] font-emberly italic"
             >
-              l
+              d
             </motion.span>
             <motion.span 
               initial={{ y: 100, opacity: 0 }}
@@ -104,7 +104,7 @@ export default function Home() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
               className="text-white text-[18rem] font-emberly italic"
             >
-              s
+              e
             </motion.span>
             <motion.span 
               initial={{ y: 100, opacity: 0 }}
@@ -113,16 +113,7 @@ export default function Home() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
               className="text-white text-[18rem] font-emberly italic"
             >
-              o
-            </motion.span>
-            <motion.span 
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
-              className="text-white text-[18rem] font-emberly italic"
-            >
-              n
+              s
             </motion.span>
           </div>
           <div className="flex flex-row w-full h-2/6 items-center justify-center ">
@@ -130,7 +121,7 @@ export default function Home() {
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 1.5 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 1.2 }}
             >
               <button 
                 onClick={handleClick}
