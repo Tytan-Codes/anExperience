@@ -90,7 +90,7 @@ export default function Experience() {
                 <div className="relative flex flex-col items-center justify-center h-full w-full z-10">
                     
                     <h1 className="text-white text-9xl font-bold animation-1 font-emberly">Hi</h1>
-                    <h1 className="text-white text-9xl font-bold animation-2 font-emberly">I'm</h1>
+                    <h1 className="text-white text-9xl font-bold animation-2 font-emberly">I&apos;m</h1>
                     <h1 className="text-white text-9xl font-bold animation-3 font-emberly">Tytan</h1>
                     <div className="animation-4 absolute z-20 bg-zinc-500 inset-[15vh] m-auto rounded-lg">
                         <div className="animation-6-1 absolute z-10 border-b-2 border-white top-[30%] left-[10%] right-[10%]" />
