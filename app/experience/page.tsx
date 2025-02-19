@@ -14,6 +14,7 @@ export default function Experience() {
         gsap.set(".animation-4", { opacity: 0, y: 50 });
         gsap.set([".animation-6-1", ".animation-6-2", ".animation-6-3"], { scaleX: 0 });
         gsap.set([".animation-7-1", ".animation-7-2", ".animation-7-3"], { opacity: 0, y: 20 });
+        gsap.set(".animation-8", { opacity: 0 });
         
         // Create animation sequence
         tl.to([".animation-1", ".animation-2", ".animation-3"], {
@@ -83,6 +84,12 @@ export default function Experience() {
             scale: 0.5,
             ease: "power2.inOut"
         }, "+=0.5")
+        .to(".animation-8", {
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.2,
+            ease: "power2.inOut"
+        }, "+=0.5")
     })
     return (
         <div className="relative h-screen w-screen">
@@ -103,19 +110,19 @@ export default function Experience() {
                     </div>
                 </div>
                 <div className="flex flex-row w-full max-w-[1200px] h-[30vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <div className="flex flex-col flex-1 border-r border-white/20 p-8">
+                    <div className="flex flex-col flex-1 border-r border-white/20 p-8 animation-8">
                         <h2 className="text-white text-4xl font-emberly mb-4">About Me</h2>
                         <p className="text-white/70 font-emberly">
                             Full-stack developer with a passion for creating seamless user experiences
                         </p>
                     </div>
-                    <div className="flex flex-col flex-1 border-r border-white/20 p-8">
+                    <div className="flex flex-col flex-1 border-r border-white/20 p-8 animation-8">
                         <h2 className="text-white text-4xl font-emberly mb-4">Projects</h2>
                         <p className="text-white/70 font-emberly">
                             Explore my latest works and technical achievements
                         </p>
                     </div>
-                    <div className="flex flex-col flex-1 p-8">
+                    <div className="flex flex-col flex-1 p-8 animation-8">
                         <h2 className="text-white text-4xl font-emberly mb-4">Experience</h2>
                         <p className="text-white/70 font-emberly">
                             Professional journey and technical expertise
