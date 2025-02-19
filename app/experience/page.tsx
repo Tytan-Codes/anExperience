@@ -85,13 +85,13 @@ const Modal = ({ isOpen, onClose, title, content }: ModalProps) => {
                 className="modal-content relative bg-zinc-850 rounded-lg p-8 max-w-2xl w-full mx-4"
                 onClick={e => e.stopPropagation()}
             >
-                <h2 className="text-white text-4xl font-emberly mb-4">{title}</h2>
-                <p className="text-white/70 font-emberly">{content}</p>
+                <h2 className="text-white text-6xl font-emberly mb-6">{title}</h2>
+                <p className="text-white/70 font-emberly text-xl leading-relaxed">{content}</p>
                 <button 
                     onClick={handleClose}
                     className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
                 >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
