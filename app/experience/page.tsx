@@ -69,7 +69,20 @@ export default function Experience() {
             y: 10,
             duration: 0.3,
             ease: "power2.inOut"
-        }, ">");
+        }, ">")
+        .to(".animation-4", {
+            opacity: 0,
+            duration: 0.3,
+            ease: "power2.inOut"
+        }, "+=0.5")
+        .to(".animation-3", {
+            opacity: 0,
+            duration: 0.3,
+            x: '-40vw',
+            y: '-30vh',
+            scale: 1,
+            ease: "power2.inOut"
+        }, "+=0.5")
     })
     return (
         <div className="relative h-screen w-screen">
@@ -79,7 +92,7 @@ export default function Experience() {
                     <h1 className="text-white text-9xl font-bold animation-1 font-emberly">Hi</h1>
                     <h1 className="text-white text-9xl font-bold animation-2 font-emberly">I'm</h1>
                     <h1 className="text-white text-9xl font-bold animation-3 font-emberly">Tytan</h1>
-                    <div className="animation-4 absolute z-20 bg-zinc-500 inset-[15vh] m-auto">
+                    <div className="animation-4 absolute z-20 bg-zinc-500 inset-[15vh] m-auto rounded-lg">
                         <div className="animation-6-1 absolute z-10 border-b-2 border-white top-[30%] left-[10%] right-[10%]" />
                         <div className="animation-6-2 absolute z-10 border-b-2 border-white top-[50%] left-[10%] right-[10%]" />
                         <div className="animation-6-3 absolute z-10 border-b-2 border-white top-[73%] left-[10%] right-[10%]" />
