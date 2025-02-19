@@ -76,11 +76,11 @@ export default function Experience() {
             ease: "power2.inOut"
         }, "+=0.5")
         .to(".animation-3", {
-            opacity: 0,
-            duration: 0.3,
-            x: '-40vw',
-            y: '-30vh',
-            scale: 1,
+            opacity: 1,
+            duration: 0.5,
+            x: '-45vw',
+            y: '-57vh',
+            scale: 0.5,
             ease: "power2.inOut"
         }, "+=0.5")
     })
@@ -92,7 +92,7 @@ export default function Experience() {
                     <h1 className="text-white text-9xl font-bold animation-1 font-emberly">Hi</h1>
                     <h1 className="text-white text-9xl font-bold animation-2 font-emberly">I&apos;m</h1>
                     <h1 className="text-white text-9xl font-bold animation-3 font-emberly">Tytan</h1>
-                    <div className="animation-4 absolute z-20 bg-zinc-500 inset-[15vh] m-auto rounded-lg">
+                    <div className="animation-4 absolute z-20 bg-zinc-850 inset-[15vh] m-auto rounded-lg">
                         <div className="animation-6-1 absolute z-10 border-b-2 border-white top-[30%] left-[10%] right-[10%]" />
                         <div className="animation-6-2 absolute z-10 border-b-2 border-white top-[50%] left-[10%] right-[10%]" />
                         <div className="animation-6-3 absolute z-10 border-b-2 border-white top-[73%] left-[10%] right-[10%]" />
@@ -100,6 +100,26 @@ export default function Experience() {
                         <h1 className="animation-7-1 absolute z-20 top-[20%] left-[10%] right-[10%] font-emberly text-white text-bold text-7xl">Welcome</h1>
                         <h1 className="animation-7-2 absolute z-20 top-[40%] left-[10%] right-[10%] font-emberly text-white text-bold text-7xl flex justify-center">to my</h1>
                         <h1 className="animation-7-3 absolute z-20 top-[60%] left-[10%] right-[10%] font-emberly text-white text-bold text-7xl flex justify-end">portfolio</h1>
+                    </div>
+                </div>
+                <div className="flex flex-row w-full max-w-[1200px] h-[30vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <div className="flex flex-col flex-1 border-r border-white/20 p-8">
+                        <h2 className="text-white text-4xl font-emberly mb-4">About Me</h2>
+                        <p className="text-white/70 font-emberly">
+                            Full-stack developer with a passion for creating seamless user experiences
+                        </p>
+                    </div>
+                    <div className="flex flex-col flex-1 border-r border-white/20 p-8">
+                        <h2 className="text-white text-4xl font-emberly mb-4">Projects</h2>
+                        <p className="text-white/70 font-emberly">
+                            Explore my latest works and technical achievements
+                        </p>
+                    </div>
+                    <div className="flex flex-col flex-1 p-8">
+                        <h2 className="text-white text-4xl font-emberly mb-4">Experience</h2>
+                        <p className="text-white/70 font-emberly">
+                            Professional journey and technical expertise
+                        </p>
                     </div>
                 </div>
         </div>
