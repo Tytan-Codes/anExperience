@@ -106,17 +106,15 @@ const Modal = ({ isOpen, onClose, title, content, isFullScreen = false, children
 
     if (!isOpen && !isClosing) return null;
 
-    const isFullDark = title === "About Me" || title === "Photography";
-
     return (
         <div 
             ref={overlayRef}
-            className={`modal-overlay fixed inset-0 ${isFullDark ? 'bg-black' : 'bg-black/50'} z-50 flex items-center justify-center`}
+            className="modal-overlay fixed inset-0 bg-black z-50 flex items-center justify-center"
             onClick={handleClose}
         >
             <div 
                 ref={modalRef}
-                className={`modal-content relative ${isFullDark ? 'bg-black' : 'bg-zinc-850'} ${
+                className={`modal-content relative bg-zinc-850 ${
                     isFullScreen 
                     ? 'fixed inset-0 w-full h-full overflow-auto' 
                     : 'rounded-lg p-8 max-w-2xl w-full mx-4'
