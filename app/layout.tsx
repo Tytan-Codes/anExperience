@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local';
 import "./globals.css";
-import CustomCursor from "./components/CustomCursor";
+import CustomCursor from "../components/CustomCursor";
 
 const humane = localFont({
   src: './fonts/Humane-VF.ttf',
