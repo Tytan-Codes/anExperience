@@ -204,6 +204,26 @@ export default function Experience() {
         experience: false
     });
 
+    const photos = [
+        {
+            src: "/photos/DSC_0651.jpg",
+            title: "Nature Shot",
+            description: "A beautiful capture of natural scenery"
+        },
+        {
+            src: "/photos/DSC_0456.jpg",
+            title: "Nature Shot",
+            description: "A beautiful capture of natural scenery"
+        },
+        
+        // Add more photos here in the same format:
+        // {
+        //     src: "/photos/your-photo-name.jpg",
+        //     title: "Photo Title",
+        //     description: "Photo Description"
+        // },
+    ];
+
     const openModal = (modal: keyof typeof modalStates) => {
         setModalStates(prev => ({ ...prev, [modal]: true }));
     };
@@ -408,19 +428,32 @@ export default function Experience() {
                 <div className="mt-12 relative">
                     <div className="overflow-x-auto pb-8 hide-scrollbar">
                         <div className="flex gap-8 w-max px-8">
-                            {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+                            {photos.map((photo, index) => (
                                 <div 
                                     key={index}
                                     className="w-[500px] flex-shrink-0 aspect-[4/3] bg-black rounded-lg overflow-hidden group relative"
                                 >
-                                    <div className="w-full h-full bg-zinc-900 rounded-lg transition-transform duration-500 group-hover:scale-105">
-                                        {/* Replace with your actual images */}
-                                    </div>
+                                    <img 
+                                        src={photo.src}
+                                        alt={photo.title}
+                                        className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                                    />
                                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                                         <div>
-                                            <h4 className="text-white text-2xl font-emberly">Photo {index}</h4>
-                                            <p className="text-white/70">Description for photo {index}</p>
+                                            <h4 className="text-white text-2xl font-emberly">{photo.title}</h4>
+                                            <p className="text-white/70">{photo.description}</p>
                                         </div>
+                                    </div>
+                                </div>
+                            ))}
+                            {/* Show placeholders only if we have less than 4 photos */}
+                            {Array.from({ length: Math.max(0, 4 - photos.length) }).map((_, index) => (
+                                <div 
+                                    key={`placeholder-${index}`}
+                                    className="w-[500px] flex-shrink-0 aspect-[4/3] bg-zinc-900 rounded-lg overflow-hidden group relative"
+                                >
+                                    <div className="w-full h-full rounded-lg transition-transform duration-500 group-hover:scale-105 flex items-center justify-center">
+                                        <p className="text-white/50">Photo Coming Soon</p>
                                     </div>
                                 </div>
                             ))}
