@@ -2,7 +2,7 @@
 
 import {gsap} from "gsap"
 import {useGSAP} from "@gsap/react"
-import { useState, useCallback, useRef, useEffect } from "react"
+import { useState, useCallback, useRef } from "react"
 
 gsap.registerPlugin(useGSAP)
 
