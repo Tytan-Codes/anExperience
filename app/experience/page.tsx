@@ -207,13 +207,13 @@ export default function Experience() {
     const photos = [
         {
             src: "/photos/DSC_0651.jpg",
-            title: "Nature Shot",
-            description: "A beautiful capture of natural scenery"
+            title: "A Cool breeze",
+            description: "A beautiful picture of a city at night"
         },
         {
             src: "/photos/DSC_0456.jpg",
-            title: "Nature Shot",
-            description: "A beautiful capture of natural scenery"
+            title: "A Beautiful Sunset",
+            description: "A beautiful picture of a sunset in Cape Canaveral"
         },
         
         // Add more photos here in the same format:
