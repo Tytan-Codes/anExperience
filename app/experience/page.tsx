@@ -164,14 +164,14 @@ const ProjectCard = ({ title, shortDesc, longDesc }: ProjectCardProps) => {
                 gsap.to(cardRef.current, {
                     backgroundColor: "rgba(24, 24, 27, 0.95)",
                     scale: 1.02,
-                    duration: 0.3,
+                    duration: 0.5,
                     ease: "power2.out"
                 });
             } else {
                 gsap.to(cardRef.current, {
-                    backgroundColor: "rgba(24, 24, 27, 0.5)",
+                    backgroundColor: "rgba(24, 24, 27, 0.95)",
                     scale: 1,
-                    duration: 0.3,
+                    duration: 0.5,
                     ease: "power2.out"
                 });
             }
