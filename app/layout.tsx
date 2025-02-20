@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local';
 import "./globals.css";
+import CustomCursor from "./components/CustomCursor";
 
 const humane = localFont({
   src: './fonts/Humane-VF.ttf',
@@ -44,8 +45,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${humane.variable} ${manuscribe.variable} ${glusp.variable} ${emberly.variable} antialiased`}
+        className={`${humane.variable} ${manuscribe.variable} ${glusp.variable} ${emberly.variable} antialiased cursor-none`}
       >
+        <CustomCursor />
         {children}
       </body>
     </html>

@@ -138,3 +138,29 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom cursor styles */
+* {
+  cursor: none !important;
+}
+
+/* Hide cursor on interactive elements */
+a, button, [role="button"] {
+  cursor: none !important;
+}
+
+/* Ensure cursor is visible on text inputs */
+input, textarea, [contenteditable="true"] {
+  cursor: text !important;
+}
+
+/* Hide cursor on iframes and videos */
+iframe, video {
+  cursor: none !important;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
