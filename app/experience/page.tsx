@@ -2,7 +2,7 @@
 
 import {gsap} from "gsap"
 import {useGSAP} from "@gsap/react"
-import { useState, useCallback, useRef } from "react"
+import { useState, useCallback, useRef, useEffect } from "react"
 
 gsap.registerPlugin(useGSAP)
 
@@ -144,6 +144,53 @@ const Modal = ({ isOpen, onClose, title, content, isFullScreen = false, children
                     </>
                 )}
             </div>
+        </div>
+    );
+};
+
+interface ProjectCardProps {
+    title: string;
+    shortDesc: string;
+    longDesc: string;
+}
+
+const ProjectCard = ({ title, shortDesc, longDesc }: ProjectCardProps) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const cardRef = useRef<HTMLDivElement>(null);
+
+    useGSAP(() => {
+        if (cardRef.current) {
+            if (isExpanded) {
+                gsap.to(cardRef.current, {
+                    backgroundColor: "rgba(24, 24, 27, 0.95)",
+                    scale: 1.02,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            } else {
+                gsap.to(cardRef.current, {
+                    backgroundColor: "rgba(24, 24, 27, 0.5)",
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            }
+        }
+    }, [isExpanded]);
+
+    return (
+        <div
+            ref={cardRef}
+            className="bg-zinc-900/50 p-8 rounded-lg cursor-pointer transition-all"
+            onClick={() => setIsExpanded(!isExpanded)}
+        >
+            <h3 className="text-white text-4xl font-emberly mb-4">{title}</h3>
+            <p className="text-white/70 text-xl">
+                {isExpanded ? longDesc : shortDesc}
+            </p>
+            <p className="text-white/50 text-sm mt-4">
+                {isExpanded ? "Click to collapse ↑" : "Click to expand ↓"}
+            </p>
         </div>
     );
 };
@@ -327,15 +374,26 @@ export default function Experience() {
                 isFullScreen
             >
                 <div className="grid grid-cols-2 gap-8 mt-12">
-                    <div className="bg-zinc-900/50 p-8 rounded-lg">
-                        <h3 className="text-white text-4xl font-emberly mb-4">Project 1</h3>
-                        <p className="text-white/70 text-xl">Description of project 1</p>
-                    </div>
-                    <div className="bg-zinc-900/50 p-8 rounded-lg">
-                        <h3 className="text-white text-4xl font-emberly mb-4">Project 2</h3>
-                        <p className="text-white/70 text-xl">Description of project 2</p>
-                    </div>
-                    {/* Add more project cards as needed */}
+                    <ProjectCard
+                        title="Portfolio Website"
+                        shortDesc="A modern, animated portfolio built with Next.js"
+                        longDesc="A fully responsive portfolio website built using Next.js, TailwindCSS, and GSAP. Features smooth animations, modal interactions, and dynamic content loading. The design focuses on user experience with elegant transitions and intuitive navigation."
+                    />
+                    <ProjectCard
+                        title="E-commerce Platform"
+                        shortDesc="Full-stack e-commerce solution"
+                        longDesc="Developed a comprehensive e-commerce platform with features including product management, cart functionality, secure checkout, and order tracking. Built with React, Node.js, and MongoDB, incorporating modern design patterns and best practices."
+                    />
+                    <ProjectCard
+                        title="Task Management App"
+                        shortDesc="Collaborative task management solution"
+                        longDesc="A real-time task management application enabling team collaboration, task assignment, and progress tracking. Implemented with React, Firebase, and real-time updates. Features include drag-and-drop organization, file attachments, and team chat."
+                    />
+                    <ProjectCard
+                        title="Weather Dashboard"
+                        shortDesc="Real-time weather tracking application"
+                        longDesc="Created a weather dashboard that provides real-time weather data visualization. Integrates with multiple weather APIs to provide accurate forecasts, radar maps, and severe weather alerts. Built with React and D3.js for data visualization."
+                    />
                 </div>
             </Modal>
 
@@ -345,17 +403,27 @@ export default function Experience() {
                 title="Photography"
                 isFullScreen
             >
-                <div className="grid grid-cols-3 gap-8 mt-12">
-                    <div className="bg-zinc-900/50 p-8 rounded-lg aspect-square">
-                        <div className="w-full h-full bg-zinc-800 rounded-lg"></div>
+                <div className="mt-12 relative">
+                    <div className="overflow-x-auto pb-8 hide-scrollbar">
+                        <div className="flex gap-8 w-max px-8">
+                            {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+                                <div 
+                                    key={index}
+                                    className="w-[500px] flex-shrink-0 aspect-[4/3] bg-black rounded-lg overflow-hidden group relative"
+                                >
+                                    <div className="w-full h-full bg-zinc-900 rounded-lg transition-transform duration-500 group-hover:scale-105">
+                                        {/* Replace with your actual images */}
+                                    </div>
+                                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                        <div>
+                                            <h4 className="text-white text-2xl font-emberly">Photo {index}</h4>
+                                            <p className="text-white/70">Description for photo {index}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                    <div className="bg-zinc-900/50 p-8 rounded-lg aspect-square">
-                        <div className="w-full h-full bg-zinc-800 rounded-lg"></div>
-                    </div>
-                    <div className="bg-zinc-900/50 p-8 rounded-lg aspect-square">
-                        <div className="w-full h-full bg-zinc-800 rounded-lg"></div>
-                    </div>
-                    {/* Add more photo placeholders as needed */}
                 </div>
             </Modal>
         </div>
