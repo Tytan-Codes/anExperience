@@ -253,9 +253,9 @@ export default function Experience() {
                     </button>
                 </div>
                 <div className="flex flex-col flex-1 p-8 animation-8">
-                    <h2 className="text-white text-4xl font-emberly mb-4">Experience</h2>
+                    <h2 className="text-white text-4xl font-emberly mb-4">Photography</h2>
                     <p className="text-white/70 font-emberly">
-                        Professional journey and technical expertise
+                        Wasting Money
                     </p>
                     <button 
                         onClick={() => openModal('experience')}
@@ -283,7 +283,7 @@ export default function Experience() {
             <Modal
                 isOpen={modalStates.experience}
                 onClose={() => closeModal('experience')}
-                title="Experience"
+                title="Photography"
                 content="With years of professional experience in the software industry, I've had the privilege of working with cutting-edge technologies and talented teams. My expertise spans across the full development stack, from frontend frameworks like React and Next.js to backend technologies and cloud infrastructure. I'm constantly learning and adapting to new technologies while maintaining a strong foundation in software development principles."
             />
         </div>
