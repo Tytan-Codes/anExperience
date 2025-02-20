@@ -48,7 +48,7 @@ export default function CustomCursor() {
                 duration: 0.3,
             });
             gsap.to(cursorOuter, {
-                scale: 1.5,
+                scale: 2,
                 duration: 0.3,
             });
         };
