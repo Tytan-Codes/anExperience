@@ -235,7 +235,7 @@ export default function Experience() {
             duration: 0.5,
         }, "+=1")
         .to(".animation-3", {
-            x: '40vw',
+            x: '45vw',
             y: '30vh',
             scale: 0.5,
             duration: 1,
