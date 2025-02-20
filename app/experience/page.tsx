@@ -204,6 +204,30 @@ export default function Experience() {
         experience: false
     });
 
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
+    const galleryRef = useRef<HTMLDivElement>(null);
+
+    const handleMouseDown = (e: React.MouseEvent) => {
+        if (!galleryRef.current) return;
+        setIsDragging(true);
+        setStartX(e.pageX - galleryRef.current.offsetLeft);
+        setScrollLeft(galleryRef.current.scrollLeft);
+    };
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (!isDragging || !galleryRef.current) return;
+        e.preventDefault();
+        const x = e.pageX - galleryRef.current.offsetLeft;
+        const walk = (x - startX) * 2;
+        galleryRef.current.scrollLeft = scrollLeft - walk;
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
+
     const photos = [
         {
             src: "/photos/DSC_0651.jpg",
@@ -426,12 +450,21 @@ export default function Experience() {
                 isFullScreen
             >
                 <div className="mt-12 relative">
-                    <div className="overflow-x-auto pb-8 hide-scrollbar">
+                    <div 
+                        ref={galleryRef}
+                        onMouseDown={handleMouseDown}
+                        onMouseMove={handleMouseMove}
+                        onMouseUp={handleMouseUp}
+                        onMouseLeave={handleMouseUp}
+                        className="overflow-x-auto pb-8 hide-scrollbar select-none"
+                        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+                    >
                         <div className="flex gap-8 w-max px-8">
                             {photos.map((photo, index) => (
                                 <div 
                                     key={index}
                                     className="w-[500px] flex-shrink-0 aspect-[4/3] bg-black rounded-lg overflow-hidden group relative"
+                                    style={{ userSelect: 'none' }}
                                 >
                                     <img 
                                         src={photo.src}
