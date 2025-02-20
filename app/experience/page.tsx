@@ -10,10 +10,12 @@ interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
     title: string;
-    content: string;
+    content?: string;
+    isFullScreen?: boolean;
+    children?: React.ReactNode;
 }
 
-const Modal = ({ isOpen, onClose, title, content }: ModalProps) => {
+const Modal = ({ isOpen, onClose, title, content, isFullScreen = false, children }: ModalProps) => {
     const [isClosing, setIsClosing] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null);
     const overlayRef = useRef<HTMLDivElement>(null);
@@ -31,20 +33,33 @@ const Modal = ({ isOpen, onClose, title, content }: ModalProps) => {
                 }
             });
 
-            tl.to(modalContent, {
-                opacity: 0,
-                scale: 0.8,
-                y: -20,
-                duration: 0.3,
-                ease: "power3.in"
-            })
-            .to(overlay, {
-                opacity: 0,
-                duration: 0.2,
-                ease: "power2.in"
-            }, "-=0.2");
+            if (isFullScreen) {
+                tl.to(modalContent, {
+                    y: "100vh",
+                    duration: 0.5,
+                    ease: "power3.in"
+                })
+                .to(overlay, {
+                    opacity: 0,
+                    duration: 0.2,
+                    ease: "power2.in"
+                }, "-=0.2");
+            } else {
+                tl.to(modalContent, {
+                    opacity: 0,
+                    scale: 0.8,
+                    y: -20,
+                    duration: 0.3,
+                    ease: "power3.in"
+                })
+                .to(overlay, {
+                    opacity: 0,
+                    duration: 0.2,
+                    ease: "power2.in"
+                }, "-=0.2");
+            }
         }
-    }, [onClose]);
+    }, [onClose, isFullScreen]);
 
     useGSAP(() => {
         if (isOpen && !isClosing) {
@@ -52,25 +67,42 @@ const Modal = ({ isOpen, onClose, title, content }: ModalProps) => {
             const overlay = overlayRef.current;
 
             if (modalContent && overlay) {
-                gsap.set(modalContent, { opacity: 0, scale: 0.8, y: 20 });
-                gsap.set(overlay, { opacity: 0 });
+                if (isFullScreen) {
+                    gsap.set(modalContent, { y: "100vh" });
+                    gsap.set(overlay, { opacity: 0 });
 
-                const tl = gsap.timeline();
-                tl.to(overlay, {
-                    opacity: 1,
-                    duration: 0.3,
-                    ease: "power2.out"
-                })
-                .to(modalContent, {
-                    opacity: 1,
-                    scale: 1,
-                    y: 0,
-                    duration: 0.5,
-                    ease: "power3.out"
-                }, "-=0.1");
+                    const tl = gsap.timeline();
+                    tl.to(overlay, {
+                        opacity: 1,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    })
+                    .to(modalContent, {
+                        y: 0,
+                        duration: 0.5,
+                        ease: "power3.out"
+                    }, "-=0.1");
+                } else {
+                    gsap.set(modalContent, { opacity: 0, scale: 0.8, y: 20 });
+                    gsap.set(overlay, { opacity: 0 });
+
+                    const tl = gsap.timeline();
+                    tl.to(overlay, {
+                        opacity: 1,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    })
+                    .to(modalContent, {
+                        opacity: 1,
+                        scale: 1,
+                        y: 0,
+                        duration: 0.5,
+                        ease: "power3.out"
+                    }, "-=0.1");
+                }
             }
         }
-    }, [isOpen, isClosing]);
+    }, [isOpen, isClosing, isFullScreen]);
 
     if (!isOpen && !isClosing) return null;
 
@@ -82,20 +114,35 @@ const Modal = ({ isOpen, onClose, title, content }: ModalProps) => {
         >
             <div 
                 ref={modalRef}
-                className="modal-content relative bg-zinc-850 rounded-lg p-8 max-w-2xl w-full mx-4"
+                className={`modal-content relative bg-zinc-850 ${
+                    isFullScreen 
+                    ? 'fixed inset-0 w-full h-full overflow-auto' 
+                    : 'rounded-lg p-8 max-w-2xl w-full mx-4'
+                }`}
                 onClick={e => e.stopPropagation()}
             >
-                <h2 className="text-white text-6xl font-emberly mb-6">{title}</h2>
-                <p className="text-white/70 font-emberly text-xl leading-relaxed">{content}</p>
                 <button 
                     onClick={handleClose}
-                    className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+                    className={`absolute ${isFullScreen ? 'top-8 right-8' : 'top-4 right-4'} text-white/70 hover:text-white transition-colors`}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
+                {isFullScreen ? (
+                    <div className="p-8">
+                        <h2 className="text-white text-8xl font-emberly mb-8">{title}</h2>
+                        {children || (
+                            <p className="text-white/70 font-emberly text-2xl leading-relaxed">{content}</p>
+                        )}
+                    </div>
+                ) : (
+                    <>
+                        <h2 className="text-white text-6xl font-emberly mb-6">{title}</h2>
+                        <p className="text-white/70 font-emberly text-xl leading-relaxed">{content}</p>
+                    </>
+                )}
             </div>
         </div>
     );
@@ -277,15 +324,40 @@ export default function Experience() {
                 isOpen={modalStates.projects}
                 onClose={() => closeModal('projects')}
                 title="Projects"
-                content="Throughout my career, I've worked on a diverse range of projects that showcase my technical versatility. From building responsive web applications to developing complex backend systems, each project has been an opportunity to push boundaries and implement innovative solutions. My portfolio includes e-commerce platforms, content management systems, and real-time applications, all built with scalability and performance in mind."
-            />
+                isFullScreen
+            >
+                <div className="grid grid-cols-2 gap-8 mt-12">
+                    <div className="bg-zinc-900/50 p-8 rounded-lg">
+                        <h3 className="text-white text-4xl font-emberly mb-4">Project 1</h3>
+                        <p className="text-white/70 text-xl">Description of project 1</p>
+                    </div>
+                    <div className="bg-zinc-900/50 p-8 rounded-lg">
+                        <h3 className="text-white text-4xl font-emberly mb-4">Project 2</h3>
+                        <p className="text-white/70 text-xl">Description of project 2</p>
+                    </div>
+                    {/* Add more project cards as needed */}
+                </div>
+            </Modal>
 
             <Modal
                 isOpen={modalStates.experience}
                 onClose={() => closeModal('experience')}
                 title="Photography"
-                content="With years of professional experience in the software industry, I've had the privilege of working with cutting-edge technologies and talented teams. My expertise spans across the full development stack, from frontend frameworks like React and Next.js to backend technologies and cloud infrastructure. I'm constantly learning and adapting to new technologies while maintaining a strong foundation in software development principles."
-            />
+                isFullScreen
+            >
+                <div className="grid grid-cols-3 gap-8 mt-12">
+                    <div className="bg-zinc-900/50 p-8 rounded-lg aspect-square">
+                        <div className="w-full h-full bg-zinc-800 rounded-lg"></div>
+                    </div>
+                    <div className="bg-zinc-900/50 p-8 rounded-lg aspect-square">
+                        <div className="w-full h-full bg-zinc-800 rounded-lg"></div>
+                    </div>
+                    <div className="bg-zinc-900/50 p-8 rounded-lg aspect-square">
+                        <div className="w-full h-full bg-zinc-800 rounded-lg"></div>
+                    </div>
+                    {/* Add more photo placeholders as needed */}
+                </div>
+            </Modal>
         </div>
     );
 }
