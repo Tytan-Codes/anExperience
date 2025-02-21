@@ -73,8 +73,8 @@ export default function Select() {
                         <h1 className="text-white text-4xl font-emberly relative z-10">Experience 1</h1>
                     </div>
                     
-                    <div className="box-2 w-[600px] h-[300px] bg-zinc-950/90 border border-white/20 rounded-lg flex items-center justify-center cursor-pointer transition-colors hover:bg-zinc-900/90">
-                        <h1 className="text-white text-4xl font-emberly relative z-10">Experience 2 <br/> (coming soon)</h1>
+                    <div onClick={() => handleNavigation("/experienceTwo")}  className="box-2 w-[600px] h-[300px] bg-zinc-950/90 border border-white/20 rounded-lg flex items-center justify-center cursor-pointer transition-colors hover:bg-zinc-900/90">
+                        <h1 className="text-white text-4xl font-emberly relative z-10">Experience 2</h1>
                     </div>
                 </div>
             </div>
