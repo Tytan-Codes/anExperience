@@ -50,7 +50,7 @@ export default function CustomCursor() {
                 });
                 gsap.to(cursorOuter, {
                     scale: 2,
-                    duration: 0.3,
+                    duration: 0.5,
                 });
             };
 
