@@ -4,6 +4,7 @@ import {gsap} from "gsap"
 import {useGSAP} from "@gsap/react"
 import { useState, useCallback, useRef } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 gsap.registerPlugin(useGSAP)
 
 interface ModalProps {
@@ -199,6 +200,7 @@ const ProjectCard = ({ title, shortDesc, longDesc }: ProjectCardProps) => {
 };
 
 export default function Experience() {
+    const router = useRouter();
     const [modalStates, setModalStates] = useState({
         about: false,
         projects: false,
@@ -265,6 +267,34 @@ export default function Experience() {
 
     const closeModal = (modal: keyof typeof modalStates) => {
         setModalStates(prev => ({ ...prev, [modal]: false }));
+    };
+
+    const handleNavigation = () => {
+        const tl = gsap.timeline({
+            onComplete: () => router.push('/select')
+        });
+
+        // Fade out all animations
+        tl.to([
+            ".animation-1",
+            ".animation-2",
+            ".animation-3",
+            ".animation-4",
+            ".animation-6-1",
+            ".animation-6-2",
+            ".animation-6-3",
+            ".animation-7-1",
+            ".animation-7-2",
+            ".animation-7-3",
+            ".animation-8",
+            ".learn-more-btn"
+        ], {
+            opacity: 0,
+            y: 50,
+            duration: 0.5,
+            ease: "power2.in",
+            stagger: 0
+        });
     };
 
     useGSAP(() => {
@@ -367,9 +397,9 @@ export default function Experience() {
             <div className="relative flex flex-col items-center justify-center h-full w-full z-10">
                 <h1 className="text-white text-9xl font-bold animation-1 font-emberly">Hi</h1>
                 <h1 className="text-white text-9xl font-bold animation-2 font-emberly">I&apos;m</h1>
-                <Link href="/select">
+                <div onClick={handleNavigation} className="cursor-pointer">
                     <h1 className="text-white text-9xl font-bold animation-3 font-emberly">Tytan</h1>
-                </Link>
+                </div>
                 <div className="animation-4 absolute z-30 bg-zinc-850 inset-[15vh] m-auto rounded-lg items-center justify-center">
                     <div className="animation-6-1 absolute z-10 border-b-2 border-white top-[30%] left-[10%] right-[10%]" > <h1 className="animation-7-1  font-emberly text-white text-bold text-7xl">Welcome</h1></div>
                     <div className="animation-6-2 absolute z-10 border-b-2 border-white top-[50%] left-[10%] right-[10%]" ><h1 className="animation-7-2 font-emberly text-white text-bold text-7xl flex justify-center">to my</h1></div>
