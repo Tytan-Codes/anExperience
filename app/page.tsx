@@ -1,137 +1,126 @@
 "use client"
 
-import { motion, AnimatePresence } from 'motion/react';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
 export default function Home() {
   const router = useRouter();
   const [isExiting, setIsExiting] = useState(false);
+  const letterRefs = {
+    tytan: useRef([]),
+    codes: useRef([])
+  };
+
+  // Initialize refs for each letter
+  letterRefs.tytan.current = [];
+  letterRefs.codes.current = [];
+
+  useEffect(() => {
+    // Entrance animation
+    const tl = gsap.timeline();
+    
+    // Animate "tytan" letters
+    tl.from(letterRefs.tytan.current, {
+      y: 100,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+      stagger: 0.1
+    });
+
+    // Animate "codes" letters
+    tl.from(letterRefs.codes.current, {
+      y: 100,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+      stagger: 0.1
+    }, "-=0.3");
+
+    // Animate button
+    tl.from(".select-button", {
+      y: 100,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out"
+    }, "-=0.1");
+  }, []);
 
   const handleClick = () => {
     setIsExiting(true);
-    // Wait for animation to complete before navigation
-    setTimeout(() => {
-      router.push('/select');
-    }, 1200); // Adjust this timing to match your exit animation duration
+    
+    // Exit animation
+    const tl = gsap.timeline({
+      onComplete: () => router.push('/select')
+    });
+
+    // Animate out "tytan" letters
+    tl.to(letterRefs.tytan.current, {
+      y: -100,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.in",
+      stagger: 0.1
+    });
+
+    // Animate out "codes" letters
+    tl.to(letterRefs.codes.current, {
+      y: -100,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.in",
+      stagger: 0.1
+    }, "-=0.3");
+
+    // Animate out button
+    tl.to(".select-button", {
+      y: -100,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.in"
+    }, "-=0.1");
+  };
+
+  const addToRefs = (el: HTMLSpanElement | null, collection: { current: HTMLSpanElement[] }) => {
+    if (el && !collection.current.includes(el)) {
+      collection.current.push(el);
+    }
   };
 
   return (
-    <AnimatePresence mode="wait">
-      {!isExiting && (
-        <div key="home" className="flex flex-col bg-gradient-to-b from-zinc-950 to-zinc-800 w-full h-screen">
-          <div className="flex flex-row w-full h-1/6">s</div>
-          <div className="flex flex-row w-full h-2/6 items-center pl-16 font-width-extended tracking-widest ">
-            <motion.span 
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="text-white text-[18rem] font-weight-black font-emberly italic"
-            >
-              t
-            </motion.span>
-            <motion.span 
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-              className="text-white text-[18rem] font-emberly italic"
-            >
-              y
-            </motion.span>
-            <motion.span 
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-              className="text-white text-[18rem] font-emberly italic"
-            >
-              t
-            </motion.span>
-            <motion.span 
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-              className="text-white text-[18rem] font-emberly italic"
-            >
-              a
-            </motion.span>
-            <motion.span 
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-              className="text-white text-[18rem] font-emberly italic"
-            >
-              n
-            </motion.span>
-          </div>
-          <div className="flex flex-row w-full h-2/6 justify-end pr-16 items-center font-width-extended tracking-widest font-emberly">
-            <motion.span 
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-              className="text-white text-[18rem] font-weight-black italic"
-            >
-              c
-            </motion.span>
-            <motion.span 
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-              className="text-white text-[18rem] font-emberly italic"
-            >
-              o
-            </motion.span>
-            <motion.span 
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
-              className="text-white text-[18rem] font-emberly italic"
-            >
-              d
-            </motion.span>
-            <motion.span 
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
-              className="text-white text-[18rem] font-emberly italic"
-            >
-              e
-            </motion.span>
-            <motion.span 
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
-              className="text-white text-[18rem] font-emberly italic"
-            >
-              s
-            </motion.span>
-          </div>
-          <div className="flex flex-row w-full h-2/6 items-center justify-center ">
-            <motion.div
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 1.2 }}
-            >
-              <button 
-                onClick={handleClick}
-                className="mt-4 inline-block border font-emberly italic  text-[1.5rem] border-white px-8 py-2 text-sm tracking-wider transition-colors hover:bg-zinc-400 hover:text-white text-white"
-              >
-                Select experience
-              </button>
-            </motion.div>
-          </div>
-        </div>
-      )}
-    </AnimatePresence>
+    <div className="flex flex-col bg-gradient-to-b from-zinc-950 to-zinc-800 w-full h-screen">
+      <div className="flex flex-row w-full h-1/6">s</div>
+      <div className="flex flex-row w-full h-2/6 items-center pl-16 font-width-extended tracking-widest">
+        {['t', 'y', 't', 'a', 'n'].map((letter, index) => (
+          <span
+            key={`tytan-${index}`}
+            ref={(el) => addToRefs(el, letterRefs.tytan)}
+            className="text-white text-[18rem] font-weight-black font-emberly italic"
+          >
+            {letter}
+          </span>
+        ))}
+      </div>
+      <div className="flex flex-row w-full h-2/6 justify-end pr-16 items-center font-width-extended tracking-widest font-emberly">
+        {['c', 'o', 'd', 'e', 's'].map((letter, index) => (
+          <span
+            key={`codes-${index}`}
+            ref={(el) => addToRefs(el, letterRefs.codes)}
+            className="text-white text-[18rem] font-weight-black font-emberly italic"
+          >
+            {letter}
+          </span>
+        ))}
+      </div>
+      <div className="flex flex-row w-full h-2/6 items-center justify-center">
+        <button 
+          onClick={handleClick}
+          className="select-button mt-4 inline-block border font-emberly italic text-[1.5rem] border-white px-8 py-2 text-sm tracking-wider transition-colors hover:bg-zinc-400 hover:text-white text-white"
+        >
+          Select experience
+        </button>
+      </div>
+    </div>
   );
 }
