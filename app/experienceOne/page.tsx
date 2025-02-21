@@ -3,7 +3,6 @@
 import {gsap} from "gsap"
 import {useGSAP} from "@gsap/react"
 import { useState, useCallback, useRef } from "react"
-import Link from "next/link"
 import { useRouter } from "next/navigation"
 gsap.registerPlugin(useGSAP)
 
