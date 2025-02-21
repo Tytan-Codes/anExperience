@@ -39,30 +39,55 @@ export default function CustomCursor() {
             yToOuter(e.clientY);
         };
 
-        // Hover effect for clickable elements
-        const hoverElements = document.querySelectorAll('a, button, [role="button"]');
-        
-        const onMouseEnter = () => {
-            gsap.to(cursor, {
-                scale: 0.5,
-                duration: 0.3,
+        // Function to handle hover effects
+        const handleHoverEffects = () => {
+            const hoverElements = document.querySelectorAll('a, button, [role="button"], [data-cursor-hover]');
+            
+            const onMouseEnter = () => {
+                gsap.to(cursor, {
+                    scale: 0.5,
+                    duration: 0.3,
+                });
+                gsap.to(cursorOuter, {
+                    scale: 2,
+                    duration: 0.3,
+                });
+            };
+
+            const onMouseLeave = () => {
+                gsap.to([cursor, cursorOuter], {
+                    scale: 1,
+                    duration: 0.3,
+                });
+            };
+
+            hoverElements.forEach(element => {
+                element.addEventListener('mouseenter', onMouseEnter);
+                element.addEventListener('mouseleave', onMouseLeave);
             });
-            gsap.to(cursorOuter, {
-                scale: 2,
-                duration: 0.3,
-            });
+
+            return { hoverElements, onMouseEnter, onMouseLeave };
         };
 
-        const onMouseLeave = () => {
-            gsap.to([cursor, cursorOuter], {
-                scale: 1,
-                duration: 0.3,
-            });
-        };
+        // Initial hover effect setup
+        const { hoverElements, onMouseEnter, onMouseLeave } = handleHoverEffects();
 
-        hoverElements.forEach(element => {
-            element.addEventListener('mouseenter', onMouseEnter);
-            element.addEventListener('mouseleave', onMouseLeave);
+        // Create a MutationObserver to watch for DOM changes
+        const observer = new MutationObserver(() => {
+            // Remove old event listeners
+            hoverElements.forEach(element => {
+                element.removeEventListener('mouseenter', onMouseEnter);
+                element.removeEventListener('mouseleave', onMouseLeave);
+            });
+            
+            // Setup new event listeners
+            handleHoverEffects();
+        });
+
+        // Start observing the document body for DOM changes
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true,
         });
 
         window.addEventListener('mousemove', mouseMoveHandler);
@@ -90,6 +115,7 @@ export default function CustomCursor() {
             window.removeEventListener('mousemove', mouseMoveHandler);
             document.body.removeEventListener('mouseleave', mouseLeaveHandler);
             document.body.removeEventListener('mouseenter', mouseEnterHandler);
+            observer.disconnect();
             hoverElements.forEach(element => {
                 element.removeEventListener('mouseenter', onMouseEnter);
                 element.removeEventListener('mouseleave', onMouseLeave);
