@@ -27,10 +27,10 @@ export default function CustomCursor() {
             delay: 0.2,
         });
 
-        let xTo = gsap.quickTo(cursor, "x", { duration: 0.2, ease: "power3" });
-        let yTo = gsap.quickTo(cursor, "y", { duration: 0.2, ease: "power3" });
-        let xToOuter = gsap.quickTo(cursorOuter, "x", { duration: 0.5, ease: "power3" });
-        let yToOuter = gsap.quickTo(cursorOuter, "y", { duration: 0.5, ease: "power3" });
+        const xTo = gsap.quickTo(cursor, "x", { duration: 0.2, ease: "power3" });
+        const yTo = gsap.quickTo(cursor, "y", { duration: 0.2, ease: "power3" });
+        const xToOuter = gsap.quickTo(cursorOuter, "x", { duration: 0.5, ease: "power3" });
+        const yToOuter = gsap.quickTo(cursorOuter, "y", { duration: 0.5, ease: "power3" });
 
         const mouseMoveHandler = (e: MouseEvent) => {
             xTo(e.clientX);
