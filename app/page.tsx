@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <AnimatePresence mode="wait">
       {!isExiting && (
-        <div key="home" className="flex flex-col bg-zinc-900 w-full h-screen">
+        <div key="home" className="flex flex-col bg-gradient-to-b from-zinc-950 to-zinc-800 w-full h-screen">
           <div className="flex flex-row w-full h-1/6">s</div>
           <div className="flex flex-row w-full h-2/6 items-center pl-16 font-width-extended tracking-widest ">
             <motion.span 

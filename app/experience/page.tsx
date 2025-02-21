@@ -363,7 +363,7 @@ export default function Experience() {
 
     return (
         <div className="relative h-screen w-screen">
-            <div className="absolute inset-0 bg-gradient-to-b from-zinc-900 to-zinc-800 h-full w-full" /> 
+            <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 to-zinc-800 h-full w-full" /> 
             <div className="relative flex flex-col items-center justify-center h-full w-full z-10">
                 <h1 className="text-white text-9xl font-bold animation-1 font-emberly">Hi</h1>
                 <h1 className="text-white text-9xl font-bold animation-2 font-emberly">I&apos;m</h1>
