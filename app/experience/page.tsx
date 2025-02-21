@@ -162,14 +162,14 @@ const ProjectCard = ({ title, shortDesc, longDesc }: ProjectCardProps) => {
         if (cardRef.current) {
             if (isExpanded) {
                 gsap.to(cardRef.current, {
-                    backgroundColor: "rgba(24, 24, 27, 0.95)",
+                    backgroundColor: "rgba(9, 9, 11, 0.95)",
                     scale: 1.02,
                     duration: 0.5,
                     ease: "power2.out"
                 });
             } else {
                 gsap.to(cardRef.current, {
-                    backgroundColor: "rgba(24, 24, 27, 0.95)",
+                    backgroundColor: "rgba(9, 9, 11, 0.95)",
                     scale: 1,
                     duration: 0.5,
                     ease: "power2.out"
@@ -181,16 +181,19 @@ const ProjectCard = ({ title, shortDesc, longDesc }: ProjectCardProps) => {
     return (
         <div
             ref={cardRef}
-            className="bg-zinc-900/50 p-8 rounded-lg cursor-pointer transition-all"
+            className="bg-zinc-950/95 p-8 rounded-lg cursor-pointer transition-all border border-white/10 relative overflow-hidden group"
             onClick={() => setIsExpanded(!isExpanded)}
         >
-            <h3 className="text-white text-4xl font-emberly mb-4">{title}</h3>
-            <p className="text-white/70 text-xl">
-                {isExpanded ? longDesc : shortDesc}
-            </p>
-            <p className="text-white/50 text-sm mt-4">
-                {isExpanded ? "Click to collapse ↑" : "Click to expand ↓"}
-            </p>
+            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative z-10">
+                <h3 className="text-white text-4xl font-emberly mb-4">{title}</h3>
+                <p className="text-white/70 text-xl">
+                    {isExpanded ? longDesc : shortDesc}
+                </p>
+                <p className="text-white/50 text-sm mt-4">
+                    {isExpanded ? "Click to collapse ↑" : "Click to expand ↓"}
+                </p>
+            </div>
         </div>
     );
 };
