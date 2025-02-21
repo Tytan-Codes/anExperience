@@ -1,7 +1,6 @@
 "use client"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
-import Link from "next/link"
 import { useRouter } from "next/navigation"
 
 gsap.registerPlugin(useGSAP)
@@ -19,7 +18,7 @@ export default function Select() {
         tl.to([".box-1", ".box-2"], {
             opacity: 0,
             y: 50,
-            duration: 0.6,
+            duration: 0.8,
             ease: "power2.in",
             stagger: 0
         })
