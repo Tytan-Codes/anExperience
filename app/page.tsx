@@ -6,7 +6,7 @@ import gsap from 'gsap';
 
 export default function Home() {
   const router = useRouter();
-  const [setIsExiting] = useState(false);
+  const [isExiting, setIsExiting] = useState(false);
   const letterRefs = {
     tytan: useRef([]),
     codes: useRef([])
