@@ -3,7 +3,7 @@
 import {gsap} from "gsap"
 import {useGSAP} from "@gsap/react"
 import { useState, useCallback, useRef } from "react"
-
+import Link from "next/link"
 gsap.registerPlugin(useGSAP)
 
 interface ModalProps {
@@ -367,7 +367,9 @@ export default function Experience() {
             <div className="relative flex flex-col items-center justify-center h-full w-full z-10">
                 <h1 className="text-white text-9xl font-bold animation-1 font-emberly">Hi</h1>
                 <h1 className="text-white text-9xl font-bold animation-2 font-emberly">I&apos;m</h1>
-                <h1 className="text-white text-9xl font-bold animation-3 font-emberly">Tytan</h1>
+                <Link href="/select">
+                    <h1 className="text-white text-9xl font-bold animation-3 font-emberly">Tytan</h1>
+                </Link>
                 <div className="animation-4 absolute z-30 bg-zinc-850 inset-[15vh] m-auto rounded-lg items-center justify-center">
                     <div className="animation-6-1 absolute z-10 border-b-2 border-white top-[30%] left-[10%] right-[10%]" > <h1 className="animation-7-1  font-emberly text-white text-bold text-7xl">Welcome</h1></div>
                     <div className="animation-6-2 absolute z-10 border-b-2 border-white top-[50%] left-[10%] right-[10%]" ><h1 className="animation-7-2 font-emberly text-white text-bold text-7xl flex justify-center">to my</h1></div>
