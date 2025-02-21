@@ -12,7 +12,7 @@ export default function Home() {
     setIsExiting(true);
     // Wait for animation to complete before navigation
     setTimeout(() => {
-      router.push('/experience');
+      router.push('/select');
     }, 1200); // Adjust this timing to match your exit animation duration
   };
 
@@ -126,7 +126,7 @@ export default function Home() {
                 onClick={handleClick}
                 className="mt-4 inline-block border font-emberly italic  text-[1.5rem] border-white px-8 py-2 text-sm tracking-wider transition-colors hover:bg-zinc-400 hover:text-white text-white"
               >
-                Start experience
+                Select experience
               </button>
             </motion.div>
           </div>
