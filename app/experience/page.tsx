@@ -230,13 +230,23 @@ export default function Experience() {
         {
             src: "/photos/DSC_0651.jpg",
             title: "A Cool breeze",
-            description: "A beautiful picture of a city at night"
+            description: "A beautiful picture of a city at night",
+            info: "Nikon D5600 | f/5.6 | 1/15 | ISO 3200"
         },
         {
             src: "/photos/DSC_0456.jpg",
             title: "A Beautiful Sunset",
-            description: "A beautiful picture of a sunset in Cape Canaveral"
+            description: "A beautiful picture of a sunset in Cape Canaveral",
+            info: "Nikon D5600 | f/5.6 | 1/100 | ISO 1000"
         },
+        {
+            src: "/photos/DSC_0205.jpg",
+            title: "Solitude on a Trail",
+            description: "A man stands on a rugged dirt path, gazing at the water, surrounded by lush greenery and an open sky, evoking solitude and reflection.",
+            info: "Nikon D5600 | f/3.5 | 1/1000 | ISO 100"
+        },
+        
+        
         
         // Add more photos here in the same format:
         // {
@@ -469,8 +479,11 @@ export default function Experience() {
                                         alt={photo.title}
                                         className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
                                     />
-                                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                        <div>
+                                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <div className="absolute top-4 right-4">
+                                            <p className="text-white/70 text-sm font-mono">{photo.info}</p>
+                                        </div>
+                                        <div className="absolute bottom-0 left-0 p-6">
                                             <h4 className="text-white text-2xl font-emberly">{photo.title}</h4>
                                             <p className="text-white/70">{photo.description}</p>
                                         </div>
@@ -484,7 +497,7 @@ export default function Experience() {
                                     className="w-[500px] flex-shrink-0 aspect-[4/3] bg-zinc-900 rounded-lg overflow-hidden group relative"
                                 >
                                     <div className="w-full h-full rounded-lg transition-transform duration-500 group-hover:scale-105 flex items-center justify-center">
-                                        <p className="text-white/50">Photo Coming Soon</p>
+                                        <p className="text-white/50">More shit photos coming soon</p>
                                     </div>
                                 </div>
                             ))}
