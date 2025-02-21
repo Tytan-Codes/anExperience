@@ -4,6 +4,7 @@ import {gsap} from "gsap"
 import {useGSAP} from "@gsap/react"
 import { useState, useCallback, useRef } from "react"
 import { useRouter } from "next/navigation"
+import Image from 'next/image'
 gsap.registerPlugin(useGSAP)
 
 interface ModalProps {
@@ -508,10 +509,12 @@ export default function Experience() {
                                     className="w-[500px] flex-shrink-0 aspect-[4/3] bg-black rounded-lg overflow-hidden group relative"
                                     style={{ userSelect: 'none' }}
                                 >
-                                    <img 
+                                    <Image 
                                         src={photo.src}
                                         alt={photo.title}
                                         className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                                        width={500}
+                                        height={375}
                                     />
                                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                         <div className="absolute top-4 right-4">

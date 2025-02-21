@@ -6,7 +6,6 @@ import gsap from 'gsap';
 
 export default function Home() {
   const router = useRouter();
-  const [isExiting, setIsExiting] = useState(false);
   const letterRefs = {
     tytan: useRef([]),
     codes: useRef([])
@@ -45,11 +44,9 @@ export default function Home() {
       duration: 0.6,
       ease: "power2.out"
     }, "-=0.1");
-  }, []);
+  }, [letterRefs.tytan.current, letterRefs.codes.current]);
 
   const handleClick = () => {
-    setIsExiting(true);
-    
     // Exit animation
     const tl = gsap.timeline({
       onComplete: () => router.push('/select')
