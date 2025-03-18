@@ -49,7 +49,7 @@ export default function Home() {
   const handleClick = () => {
     // Exit animation
     const tl = gsap.timeline({
-      onComplete: () => router.push('/select')
+      onComplete: () => router.push('/experienceOne')
     });
 
     // Animate out "tytan" letters
@@ -115,7 +115,7 @@ export default function Home() {
           onClick={handleClick}
           className="select-button mt-4 inline-block border font-emberly italic text-[1.5rem] border-white px-8 py-2 text-sm tracking-wider transition-colors hover:bg-zinc-400 hover:text-white text-white"
         >
-          Select experience
+          Start experience
         </button>
       </div>
     </div>

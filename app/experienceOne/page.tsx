@@ -467,7 +467,7 @@ export default function Experience() {
                         title="Portfolio Website"
                         shortDesc="A modern, animated portfolio built with Next.js"
                         longDesc="A fully responsive portfolio website built using Next.js, TailwindCSS, and GSAP. Features smooth animations, modal interactions, and dynamic content loading. The design focuses on user experience with elegant transitions and intuitive navigation."
-                    />
+                    /> {/*}
                     <ProjectCard
                         title="E-commerce Platform"
                         shortDesc="Full-stack e-commerce solution"
@@ -482,7 +482,7 @@ export default function Experience() {
                         title="Weather Dashboard"
                         shortDesc="Real-time weather tracking application"
                         longDesc="Created a weather dashboard that provides real-time weather data visualization. Integrates with multiple weather APIs to provide accurate forecasts, radar maps, and severe weather alerts. Built with React and D3.js for data visualization."
-                    />
+                    /> */}
                 </div>
             </Modal>
 
