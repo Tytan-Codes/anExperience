@@ -393,7 +393,17 @@ export default function Experience() {
 
     return (
         <div className="relative h-screen w-screen">
-            <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 to-zinc-800 h-full w-full" /> 
+            {/* Background with Circles */}
+            <div className="absolute inset-0">
+                <div className="absolute w-24 h-24 rounded-full bg-red-500/30 top-[10%] left-[20%] animate-pulse" />
+                <div className="absolute w-32 h-32 rounded-full bg-blue-500/30 top-[30%] left-[60%] animate-pulse delay-1000" />
+                <div className="absolute w-16 h-16 rounded-full bg-green-500/30 top-[50%] left-[30%] animate-pulse delay-2000" />
+                <div className="absolute w-20 h-20 rounded-full bg-yellow-500/30 top-[70%] left-[80%] animate-pulse delay-3000" />
+                <div className="absolute w-28 h-28 rounded-full bg-purple-500/30 top-[20%] left-[50%] animate-pulse delay-4000" />
+                <div className="absolute w-24 h-24 rounded-full bg-orange-500/30 top-[60%] left-[10%] animate-pulse delay-5000" />
+            </div>
+            {/* Frosted Glass Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/30 to-zinc-800/30 backdrop-blur-lg" />
             <div className="relative flex flex-col items-center justify-center h-full w-full z-10">
                 <h1 className="text-white text-9xl font-bold animation-1 font-emberly">Hi</h1>
                 <h1 className="text-white text-9xl font-bold animation-2 font-emberly">I&apos;m</h1>
