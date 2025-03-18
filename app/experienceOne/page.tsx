@@ -271,7 +271,7 @@ export default function Experience() {
 
     const handleNavigation = () => {
         const tl = gsap.timeline({
-            onComplete: () => router.push('/select')
+            onComplete: () => router.push('/')
         });
 
         // Fade out all animations
