@@ -1,11 +1,12 @@
 "use client"
 
 import { useRouter } from 'next/navigation';
-import {  useEffect, useRef } from 'react';
+import {  useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 export default function Home() {
   const router = useRouter();
+  const [windowHeight, setWindowHeight] = useState(0);
   const letterRefs = {
     tytan: useRef([]),
     codes: useRef([])
@@ -16,12 +17,28 @@ export default function Home() {
   letterRefs.codes.current = [];
 
   useEffect(() => {
+    // Set initial window height
+    setWindowHeight(window.innerHeight);
+
+    // Handle window resize
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
     // Entrance animation
     const tl = gsap.timeline();
     
+    // Calculate animation values based on viewport height
+    const yOffset = windowHeight * 0.15; // 15% of viewport height
+    
     // Animate "tytan" letters
     tl.from(letterRefs.tytan.current, {
-      y: 100,
+      y: yOffset,
       opacity: 0,
       duration: 0.6,
       ease: "power2.out",
@@ -30,7 +47,7 @@ export default function Home() {
 
     // Animate "codes" letters
     tl.from(letterRefs.codes.current, {
-      y: 100,
+      y: yOffset,
       opacity: 0,
       duration: 0.6,
       ease: "power2.out",
@@ -39,12 +56,12 @@ export default function Home() {
 
     // Animate button
     tl.from(".select-button", {
-      y: 100,
+      y: yOffset,
       opacity: 0,
       duration: 0.6,
       ease: "power2.out"
     }, "-=0.1");
-  }, [letterRefs.tytan.current, letterRefs.codes.current]);
+  }, [letterRefs.tytan.current, letterRefs.codes.current, windowHeight]);
 
   const handleClick = () => {
     // Exit animation
@@ -52,9 +69,12 @@ export default function Home() {
       onComplete: () => router.push('/select')
     });
 
+    // Calculate animation values based on viewport height
+    const yOffset = windowHeight * 0.15; // 15% of viewport height
+
     // Animate out "tytan" letters
     tl.to(letterRefs.tytan.current, {
-      y: -100,
+      y: -yOffset,
       opacity: 0,
       duration: 0.6,
       ease: "power2.in",
@@ -63,7 +83,7 @@ export default function Home() {
 
     // Animate out "codes" letters
     tl.to(letterRefs.codes.current, {
-      y: -100,
+      y: -yOffset,
       opacity: 0,
       duration: 0.6,
       ease: "power2.in",
@@ -72,7 +92,7 @@ export default function Home() {
 
     // Animate out button
     tl.to(".select-button", {
-      y: -100,
+      y: -yOffset,
       opacity: 0,
       duration: 0.6,
       ease: "power2.in"
@@ -88,7 +108,7 @@ export default function Home() {
   return (
     <div className="flex flex-col bg-gradient-to-b from-zinc-950 to-zinc-800 w-full h-screen">
       <div className="flex flex-row w-full h-1/6"></div>
-      <div className="flex flex-row w-full h-2/6 items-center px-4 sm:px-8 md:px-16 font-width-extended tracking-widest">
+      <div className="flex flex-row w-full h-2/6 items-center justify-center px-4 sm:px-8 md:px-12 lg:px-16 font-width-extended tracking-widest">
         {['t', 'y', 't', 'a', 'n'].map((letter, index) => (
           <span
             key={`tytan-${index}`}
@@ -99,7 +119,7 @@ export default function Home() {
           </span>
         ))}
       </div>
-      <div className="flex flex-row w-full h-2/6 justify-end px-4 sm:px-8 md:px-16 items-center font-width-extended tracking-widest font-emberly">
+      <div className="flex flex-row w-full h-2/6 justify-center px-4 sm:px-8 md:px-12 lg:px-16 items-center font-width-extended tracking-widest font-emberly">
         {['c', 'o', 'd', 'e', 's'].map((letter, index) => (
           <span
             key={`codes-${index}`}
