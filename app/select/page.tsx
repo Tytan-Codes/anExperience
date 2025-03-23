@@ -70,11 +70,11 @@ export default function Select() {
             <div className="flex flex-col w-screen h-screen bg-gradient-to-b from-zinc-950 to-zinc-800">
                 <div className="flex justify-center items-center h-full gap-24">
                     <div onClick={() => handleNavigation("/experienceOne")} className="box-1 w-[600px] h-[300px] bg-zinc-950/90 border border-white/20 rounded-lg flex items-center justify-center cursor-pointer transition-colors hover:bg-zinc-900/90">
-                        <h1 className="text-white text-4xl font-emberly relative z-10">Experience 1</h1>
+                        <h1 className="text-white text-4xl font-emberly relative z-10">Portfolio</h1>
                     </div>
                     
                     <div onClick={() => handleNavigation("/experienceTwo")}  className="box-2 w-[600px] h-[300px] bg-zinc-950/90 border border-white/20 rounded-lg flex items-center justify-center cursor-pointer transition-colors hover:bg-zinc-900/90">
-                        <h1 className="text-white text-4xl font-emberly relative z-10">Experience 2</h1>
+                        <h1 className="text-white text-4xl font-emberly relative z-10">photo essays</h1>
                     </div>
                 </div>
             </div>

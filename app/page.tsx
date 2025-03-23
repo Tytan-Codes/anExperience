@@ -49,7 +49,7 @@ export default function Home() {
   const handleClick = () => {
     // Exit animation
     const tl = gsap.timeline({
-      onComplete: () => router.push('/experienceOne')
+      onComplete: () => router.push('/select')
     });
 
     // Animate out "tytan" letters
