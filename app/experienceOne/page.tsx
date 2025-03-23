@@ -468,7 +468,7 @@ export default function Experience() {
                 content="I'm a passionate full-stack developer with a keen eye for detail and a love for creating intuitive user experiences. My journey in software development began with a curiosity for how things work, which has evolved into a professional pursuit of excellence in web development. I specialize in modern web technologies and believe in writing clean, maintainable code that scales."
             >
                 <h2 className="text-white text-4xl md:text-6xl font-emberly mb-6">About Me</h2>
-                <p className="text-white/70 font-emberly text-base md:text-xl leading-relaxed">I'm a passionate full-stack developer with a keen eye for detail and a love for creating intuitive user experiences. My journey in software development began with a curiosity for how things work, which has evolved into a professional pursuit of excellence in web development. I specialize in modern web technologies and believe in writing clean, maintainable code that scales.</p>
+                <p className="text-white/70 font-emberly text-base md:text-xl leading-relaxed">I&apos;m a passionate full-stack developer with a keen eye for detail and a love for creating intuitive user experiences. My journey in software development began with a curiosity for how things work, which has evolved into a professional pursuit of excellence in web development. I specialize in modern web technologies and believe in writing clean, maintainable code that scales.</p>
             </Modal>
 
             <Modal

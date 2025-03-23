@@ -223,17 +223,17 @@ export default function ExperienceTwo() {
                     <p className="text-base sm:text-lg md:text-xl leading-relaxed">
                         Las Vegas, a city that never sleeps, where dreams are made and fortunes are lost. 
                         The neon lights paint the night sky in a kaleidoscope of colors, while the Strip 
-                        pulses with an energy that's uniquely its own.
+                        pulses with an energy that&apos;s uniquely its own.
                     </p>
                     <p className="text-base sm:text-lg md:text-xl leading-relaxed">
                         From the iconic Bellagio fountains to the grandeur of the Venetian, every corner 
-                        tells a story of excess and entertainment. The city's architecture is a testament 
+                        tells a story of excess and entertainment. The city&apos;s architecture is a testament 
                         to human ambition, with each casino trying to outdo the next in spectacle and scale.
                     </p>
                     <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        But beyond the glitz and glamour, there's a quieter side to Vegas - the local 
+                        But beyond the glitz and glamour, there&apos;s a quieter side to Vegas - the local 
                         neighborhoods, the desert landscapes, and the people who call this city home. 
-                        It's a place where reality and fantasy blur, creating an experience that's 
+                        It&apos;s a place where reality and fantasy blur, creating an experience that&apos;s 
                         impossible to forget.
                     </p>
                 </div>
@@ -246,7 +246,7 @@ export default function ExperienceTwo() {
             >
                 <div className="text-white/80 space-y-4 sm:space-y-6">
                     <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        New Zealand, where nature's grandeur meets cultural richness. The land of the 
+                        New Zealand, where nature&apos;s grandeur meets cultural richness. The land of the 
                         long white cloud offers landscapes that seem to have been painted by the gods 
                         themselves - from the snow-capped peaks of the Southern Alps to the pristine 
                         beaches of the North Island.
@@ -255,10 +255,10 @@ export default function ExperienceTwo() {
                         The Maori culture adds a layer of depth to this already fascinating country, 
                         with traditions that have been preserved and celebrated for centuries. The 
                         connection between the land and its people is palpable, creating a sense of 
-                        harmony that's rare in our modern world.
+                        harmony that&apos;s rare in our modern world.
                     </p>
                     <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        Whether you're exploring the geothermal wonders of Rotorua, hiking through 
+                        Whether you&apos;re exploring the geothermal wonders of Rotorua, hiking through 
                         the lush forests of Fiordland, or simply enjoying the laid-back atmosphere 
                         of a local café, New Zealand offers an experience that touches the soul and 
                         stays with you forever.
