@@ -68,13 +68,13 @@ export default function Select() {
     return (
         <div className="flex flex-col">
             <div className="flex flex-col w-screen h-screen bg-gradient-to-b from-zinc-950 to-zinc-800">
-                <div className="flex justify-center items-center h-full gap-24">
-                    <div onClick={() => handleNavigation("/experienceOne")} className="box-1 w-[600px] h-[300px] bg-zinc-950/90 border border-white/20 rounded-lg flex items-center justify-center cursor-pointer transition-colors hover:bg-zinc-900/90">
-                        <h1 className="text-white text-4xl font-emberly relative z-10">Portfolio</h1>
+                <div className="flex flex-col sm:flex-row justify-center items-center h-full gap-8 sm:gap-12 md:gap-24 px-4 sm:px-8">
+                    <div onClick={() => handleNavigation("/experienceOne")} className="box-1 w-full sm:w-[400px] md:w-[500px] lg:w-[600px] h-[200px] sm:h-[250px] md:h-[300px] bg-zinc-950/90 border border-white/20 rounded-lg flex items-center justify-center cursor-pointer transition-colors hover:bg-zinc-900/90">
+                        <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-emberly relative z-10">Portfolio</h1>
                     </div>
                     
-                    <div onClick={() => handleNavigation("/experienceTwo")}  className="box-2 w-[600px] h-[300px] bg-zinc-950/90 border border-white/20 rounded-lg flex items-center justify-center cursor-pointer transition-colors hover:bg-zinc-900/90">
-                        <h1 className="text-white text-4xl font-emberly relative z-10">photo essays</h1>
+                    <div onClick={() => handleNavigation("/experienceTwo")} className="box-2 w-full sm:w-[400px] md:w-[500px] lg:w-[600px] h-[200px] sm:h-[250px] md:h-[300px] bg-zinc-950/90 border border-white/20 rounded-lg flex items-center justify-center cursor-pointer transition-colors hover:bg-zinc-900/90">
+                        <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-emberly relative z-10">photo essays</h1>
                     </div>
                 </div>
             </div>
