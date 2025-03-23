@@ -405,54 +405,56 @@ export default function Experience() {
             {/* Frosted Glass Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/30 to-zinc-800/30 backdrop-blur-lg" />
             <div className="relative flex flex-col items-center justify-center h-full w-full z-10">
-                <h1 className="text-white text-9xl font-bold animation-1 font-emberly">Hi</h1>
-                <h1 className="text-white text-9xl font-bold animation-2 font-emberly">I&apos;m</h1>
+                <h1 className="text-white text-5xl sm:text-7xl md:text-9xl font-bold animation-1 font-emberly">Hi</h1>
+                <h1 className="text-white text-5xl sm:text-7xl md:text-9xl font-bold animation-2 font-emberly">I&apos;m</h1>
                 <div onClick={handleNavigation} className="cursor-pointer">
-                    <h1 className="text-white text-9xl font-bold animation-3 font-emberly">Tytan</h1>
+                    <h1 className="text-white text-5xl sm:text-7xl md:text-9xl font-bold animation-3 font-emberly">Tytan</h1>
                 </div>
                 <div className="animation-4 absolute z-30 bg-zinc-850 inset-[15vh] m-auto rounded-lg items-center justify-center">
-                    <div className="animation-6-1 absolute z-10 border-b-2 border-white top-[30%] left-[10%] right-[10%]" > <h1 className="animation-7-1  font-emberly text-white text-bold text-7xl">Welcome</h1></div>
-                    <div className="animation-6-2 absolute z-10 border-b-2 border-white top-[50%] left-[10%] right-[10%]" ><h1 className="animation-7-2 font-emberly text-white text-bold text-7xl flex justify-center">to my</h1></div>
-                    <div className="animation-6-3 absolute z-10 border-b-2 border-white top-[73%] left-[10%] right-[10%]" > <h1 className="animation-7-3 font-emberly text-white text-bold text-7xl flex justify-end">portfolio</h1></div>
-                    
-                    
-                    
-                    
+                    <div className="animation-6-1 absolute z-10 border-b-2 border-white top-[30%] left-[10%] right-[10%]" > 
+                        <h1 className="animation-7-1 font-emberly text-white text-bold text-4xl md:text-7xl">Welcome</h1>
+                    </div>
+                    <div className="animation-6-2 absolute z-10 border-b-2 border-white top-[50%] left-[10%] right-[10%]" >
+                        <h1 className="animation-7-2 font-emberly text-white text-bold text-4xl md:text-7xl flex justify-center">to my</h1>
+                    </div>
+                    <div className="animation-6-3 absolute z-10 border-b-2 border-white top-[73%] left-[10%] right-[10%]" > 
+                        <h1 className="animation-7-3 font-emberly text-white text-bold text-4xl md:text-7xl flex justify-end">portfolio</h1>
+                    </div>
                 </div>
             </div>
-            <div className="flex flex-row w-full max-w-[1200px] h-[30vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                <div className="flex flex-col flex-1 border-r border-white/20 p-8 animation-8">
-                    <h2 className="text-white text-4xl font-emberly mb-4">About Me</h2>
-                    <p className="text-white/70 font-emberly">
+            <div className="flex flex-col md:flex-row w-full max-w-[1200px] h-auto md:h-[30vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                <div className="flex flex-col flex-1 border-r border-white/20 p-4 md:p-8 animation-8">
+                    <h2 className="text-white text-2xl md:text-4xl font-emberly mb-4">About Me</h2>
+                    <p className="text-white/70 text-base md:text-xl font-emberly">
                         Frontend developer with a passion for creating seamless user experiences
                     </p>
                     <button 
                         onClick={() => openModal('about')}
-                        className="learn-more-btn self-end mt-auto text-white/70 hover:text-white transition-colors font-emberly"
+                        className="learn-more-btn self-end mt-auto text-white/70 hover:text-white transition-colors font-emberly text-sm md:text-base"
                     >
                         Learn More →
                     </button>
                 </div>
-                <div className="flex flex-col flex-1 border-r border-white/20 p-8 animation-8">
-                    <h2 className="text-white text-4xl font-emberly mb-4">Projects</h2>
-                    <p className="text-white/70 font-emberly">
+                <div className="flex flex-col flex-1 border-r border-white/20 p-4 md:p-8 animation-8">
+                    <h2 className="text-white text-2xl md:text-4xl font-emberly mb-4">Projects</h2>
+                    <p className="text-white/70 text-base md:text-xl font-emberly">
                         Explore my latest works and technical achievements
                     </p>
                     <button 
                         onClick={() => openModal('projects')}
-                        className="learn-more-btn self-end mt-auto text-white/70 hover:text-white transition-colors font-emberly"
+                        className="learn-more-btn self-end mt-auto text-white/70 hover:text-white transition-colors font-emberly text-sm md:text-base"
                     >
                         Learn More →
                     </button>
                 </div>
-                <div className="flex flex-col flex-1 p-8 animation-8">
-                    <h2 className="text-white text-4xl font-emberly mb-4">Photo Essays</h2>
-                    <p className="text-white/70 font-emberly">
+                <div className="flex flex-col flex-1 p-4 md:p-8 animation-8">
+                    <h2 className="text-white text-2xl md:text-4xl font-emberly mb-4">Photo Essays</h2>
+                    <p className="text-white/70 text-base md:text-xl font-emberly">
                         Wasting Money
                     </p>
                     <button 
                         onClick={() => openModal('experience')}
-                        className="learn-more-btn self-end mt-auto text-white/70 hover:text-white transition-colors font-emberly"
+                        className="learn-more-btn self-end mt-auto text-white/70 hover:text-white transition-colors font-emberly text-sm md:text-base"
                     >
                         Learn More →
                     </button>
@@ -464,7 +466,10 @@ export default function Experience() {
                 onClose={() => closeModal('about')}
                 title="About Me"
                 content="I'm a passionate full-stack developer with a keen eye for detail and a love for creating intuitive user experiences. My journey in software development began with a curiosity for how things work, which has evolved into a professional pursuit of excellence in web development. I specialize in modern web technologies and believe in writing clean, maintainable code that scales."
-            />
+            >
+                <h2 className="text-white text-4xl md:text-6xl font-emberly mb-6">About Me</h2>
+                <p className="text-white/70 font-emberly text-base md:text-xl leading-relaxed">I'm a passionate full-stack developer with a keen eye for detail and a love for creating intuitive user experiences. My journey in software development began with a curiosity for how things work, which has evolved into a professional pursuit of excellence in web development. I specialize in modern web technologies and believe in writing clean, maintainable code that scales.</p>
+            </Modal>
 
             <Modal
                 isOpen={modalStates.projects}
@@ -472,27 +477,15 @@ export default function Experience() {
                 title="Projects"
                 isFullScreen
             >
-                <div className="grid grid-cols-2 gap-8 mt-12">
-                    <ProjectCard
-                        title="Portfolio Website"
-                        shortDesc="A modern, animated portfolio built with Next.js"
-                        longDesc="A fully responsive portfolio website built using Next.js, TailwindCSS, and GSAP. Features smooth animations, modal interactions, and dynamic content loading. The design focuses on user experience with elegant transitions and intuitive navigation."
-                    /> {/*}
-                    <ProjectCard
-                        title="E-commerce Platform"
-                        shortDesc="Full-stack e-commerce solution"
-                        longDesc="Developed a comprehensive e-commerce platform with features including product management, cart functionality, secure checkout, and order tracking. Built with React, Node.js, and MongoDB, incorporating modern design patterns and best practices."
-                    />
-                    <ProjectCard
-                        title="Task Management App"
-                        shortDesc="Collaborative task management solution"
-                        longDesc="A real-time task management application enabling team collaboration, task assignment, and progress tracking. Implemented with React, Firebase, and real-time updates. Features include drag-and-drop organization, file attachments, and team chat."
-                    />
-                    <ProjectCard
-                        title="Weather Dashboard"
-                        shortDesc="Real-time weather tracking application"
-                        longDesc="Created a weather dashboard that provides real-time weather data visualization. Integrates with multiple weather APIs to provide accurate forecasts, radar maps, and severe weather alerts. Built with React and D3.js for data visualization."
-                    /> */}
+                <div className="p-8">
+                    <h2 className="text-white text-5xl md:text-8xl font-emberly mb-8">Projects</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                        <ProjectCard
+                            title="Portfolio Website"
+                            shortDesc="A modern, animated portfolio built with Next.js"
+                            longDesc="A fully responsive portfolio website built using Next.js, TailwindCSS, and GSAP. Features smooth animations, modal interactions, and dynamic content loading. The design focuses on user experience with elegant transitions and intuitive navigation."
+                        />
+                    </div>
                 </div>
             </Modal>
 
@@ -502,52 +495,54 @@ export default function Experience() {
                 title="Photography"
                 isFullScreen
             >
-                <div className="mt-12 relative">
-                    <div 
-                        ref={galleryRef}
-                        onMouseDown={handleMouseDown}
-                        onMouseMove={handleMouseMove}
-                        onMouseUp={handleMouseUp}
-                        onMouseLeave={handleMouseUp}
-                        className="overflow-x-auto pb-8 hide-scrollbar select-none"
-                        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-                    >
-                        <div className="flex gap-8 w-max px-8">
-                            {photos.map((photo, index) => (
-                                <div 
-                                    key={index}
-                                    className="w-[500px] flex-shrink-0 aspect-[4/3] bg-black rounded-lg overflow-hidden group relative"
-                                    style={{ userSelect: 'none' }}
-                                >
-                                    <Image 
-                                        src={photo.src}
-                                        alt={photo.title}
-                                        className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
-                                        width={500}
-                                        height={375}
-                                    />
-                                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div className="absolute top-4 right-4">
-                                            <p className="text-white/70 text-sm font-mono">{photo.info}</p>
-                                        </div>
-                                        <div className="absolute bottom-0 left-0 p-6">
-                                            <h4 className="text-white text-2xl font-emberly">{photo.title}</h4>
-                                            <p className="text-white/70">{photo.description}</p>
+                <div className="p-8">
+                    <h2 className="text-white text-5xl md:text-8xl font-emberly mb-8">Photography</h2>
+                    <div className="mt-12 relative">
+                        <div 
+                            ref={galleryRef}
+                            onMouseDown={handleMouseDown}
+                            onMouseMove={handleMouseMove}
+                            onMouseUp={handleMouseUp}
+                            onMouseLeave={handleMouseUp}
+                            className="overflow-x-auto pb-8 hide-scrollbar select-none"
+                            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+                        >
+                            <div className="flex gap-8 w-max px-8">
+                                {photos.map((photo, index) => (
+                                    <div 
+                                        key={index}
+                                        className="w-[300px] md:w-[500px] flex-shrink-0 aspect-[4/3] bg-black rounded-lg overflow-hidden group relative"
+                                        style={{ userSelect: 'none' }}
+                                    >
+                                        <Image 
+                                            src={photo.src}
+                                            alt={photo.title}
+                                            className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                                            width={500}
+                                            height={375}
+                                        />
+                                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                            <div className="absolute top-4 right-4">
+                                                <p className="text-white/70 text-sm font-mono">{photo.info}</p>
+                                            </div>
+                                            <div className="absolute bottom-0 left-0 p-6">
+                                                <h4 className="text-white text-xl md:text-2xl font-emberly">{photo.title}</h4>
+                                                <p className="text-white/70 text-base md:text-lg">{photo.description}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
-                            {/* Show placeholders only if we have less than 4 photos */}
-                            {Array.from({ length: Math.max(0, 4 - photos.length) }).map((_, index) => (
-                                <div 
-                                    key={`placeholder-${index}`}
-                                    className="w-[500px] flex-shrink-0 aspect-[4/3] bg-zinc-900 rounded-lg overflow-hidden group relative"
-                                >
-                                    <div className="w-full h-full rounded-lg transition-transform duration-500 group-hover:scale-105 flex items-center justify-center">
-                                        <p className="text-white/50">More shit photos coming soon</p>
+                                ))}
+                                {Array.from({ length: Math.max(0, 4 - photos.length) }).map((_, index) => (
+                                    <div 
+                                        key={`placeholder-${index}`}
+                                        className="w-[300px] md:w-[500px] flex-shrink-0 aspect-[4/3] bg-zinc-900 rounded-lg overflow-hidden group relative"
+                                    >
+                                        <div className="w-full h-full rounded-lg transition-transform duration-500 group-hover:scale-105 flex items-center justify-center">
+                                            <p className="text-white/50">More shit photos coming soon</p>
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
