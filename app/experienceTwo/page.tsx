@@ -2,7 +2,7 @@
 
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
-import { useState } from "react"
+import { useState, useRef, useCallback } from "react"
 import Image from 'next/image'
 
 gsap.registerPlugin(useGSAP)
@@ -15,19 +15,79 @@ interface ModalProps {
 }
 
 const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
-    if (!isOpen) return null;
+    const modalRef = useRef<HTMLDivElement>(null);
+    const overlayRef = useRef<HTMLDivElement>(null);
+    const [isClosing, setIsClosing] = useState(false);
+
+    const handleClose = useCallback(() => {
+        setIsClosing(true);
+        const modalContent = modalRef.current;
+        const overlay = overlayRef.current;
+
+        if (modalContent && overlay) {
+            const tl = gsap.timeline({
+                onComplete: () => {
+                    setIsClosing(false);
+                    onClose();
+                }
+            });
+
+            tl.to(modalContent, {
+                opacity: 0,
+                scale: 0.8,
+                y: -20,
+                duration: 0.3,
+                ease: "power3.in"
+            })
+            .to(overlay, {
+                opacity: 0,
+                duration: 0.2,
+                ease: "power2.in"
+            }, "-=0.2");
+        }
+    }, [onClose]);
+
+    useGSAP(() => {
+        if (isOpen && !isClosing) {
+            const modalContent = modalRef.current;
+            const overlay = overlayRef.current;
+
+            if (modalContent && overlay) {
+                gsap.set(modalContent, { opacity: 0, scale: 0.8, y: 20 });
+                gsap.set(overlay, { opacity: 0 });
+
+                const tl = gsap.timeline();
+                tl.to(overlay, {
+                    opacity: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                })
+                .to(modalContent, {
+                    opacity: 1,
+                    scale: 1,
+                    y: 0,
+                    duration: 0.5,
+                    ease: "power3.out"
+                }, "-=0.1");
+            }
+        }
+    }, [isOpen, isClosing]);
+
+    if (!isOpen && !isClosing) return null;
 
     return (
         <div 
+            ref={overlayRef}
             className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center"
-            onClick={onClose}
+            onClick={handleClose}
         >
             <div 
+                ref={modalRef}
                 className="bg-zinc-900 rounded-lg p-8 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto"
                 onClick={e => e.stopPropagation()}
             >
                 <button 
-                    onClick={onClose}
+                    onClick={handleClose}
                     className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
