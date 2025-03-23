@@ -446,7 +446,7 @@ export default function Experience() {
                     </button>
                 </div>
                 <div className="flex flex-col flex-1 p-8 animation-8">
-                    <h2 className="text-white text-4xl font-emberly mb-4">Photography</h2>
+                    <h2 className="text-white text-4xl font-emberly mb-4">Photo Essays</h2>
                     <p className="text-white/70 font-emberly">
                         Wasting Money
                     </p>
