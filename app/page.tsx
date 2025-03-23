@@ -87,24 +87,24 @@ export default function Home() {
 
   return (
     <div className="flex flex-col bg-gradient-to-b from-zinc-950 to-zinc-800 w-full h-screen">
-      <div className="flex flex-row w-full h-1/6">s</div>
-      <div className="flex flex-row w-full h-2/6 items-center pl-16 font-width-extended tracking-widest">
+      <div className="flex flex-row w-full h-1/6"></div>
+      <div className="flex flex-row w-full h-2/6 items-center px-4 sm:px-8 md:px-16 font-width-extended tracking-widest">
         {['t', 'y', 't', 'a', 'n'].map((letter, index) => (
           <span
             key={`tytan-${index}`}
             ref={(el) => addToRefs(el, letterRefs.tytan)}
-            className="text-white text-[18rem] font-weight-black font-emberly italic"
+            className="text-white text-[4rem] sm:text-[8rem] md:text-[12rem] lg:text-[18rem] font-weight-black font-emberly italic"
           >
             {letter}
           </span>
         ))}
       </div>
-      <div className="flex flex-row w-full h-2/6 justify-end pr-16 items-center font-width-extended tracking-widest font-emberly">
+      <div className="flex flex-row w-full h-2/6 justify-end px-4 sm:px-8 md:px-16 items-center font-width-extended tracking-widest font-emberly">
         {['c', 'o', 'd', 'e', 's'].map((letter, index) => (
           <span
             key={`codes-${index}`}
             ref={(el) => addToRefs(el, letterRefs.codes)}
-            className="text-white text-[18rem] font-weight-black font-emberly italic"
+            className="text-white text-[4rem] sm:text-[8rem] md:text-[12rem] lg:text-[18rem] font-weight-black font-emberly italic"
           >
             {letter}
           </span>
@@ -113,7 +113,7 @@ export default function Home() {
       <div className="flex flex-row w-full h-2/6 items-center justify-center">
         <button 
           onClick={handleClick}
-          className="select-button mt-4 inline-block border font-emberly italic text-[1.5rem] border-white px-8 py-2 text-sm tracking-wider transition-colors hover:bg-zinc-400 hover:text-white text-white"
+          className="select-button mt-4 inline-block border font-emberly italic text-base sm:text-lg md:text-xl lg:text-[1.5rem] border-white px-4 sm:px-6 md:px-8 py-2 text-sm tracking-wider transition-colors hover:bg-zinc-400 hover:text-white text-white"
         >
           Start experience
         </button>
