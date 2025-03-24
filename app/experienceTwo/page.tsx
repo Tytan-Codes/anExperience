@@ -155,6 +155,18 @@ export default function ExperienceTwo() {
             title: "Solitude on a Trail",
             description: "A man stands on a rugged dirt path, gazing at the water, surrounded by lush greenery and an open sky, evoking solitude and reflection.",
             info: "Nikon D5600 | f/5.6 | 1/125 | ISO 100"
+        },
+        {
+            src: "/photos/DSC_414.jpg",
+            title: "Launch Day",
+            description: "A picture of the launch of the Space X rocket",
+            info: "Nikon D5600 | f/5.6 | 1/4000 | ISO 100"
+        },
+        {
+            src: "/photos/DSC_0213.jpg",
+            title: "Very scary alligators",
+            description: "A picture of a very scary alligator",
+            info: "Nikon D5600 | f/5.6 | 1/2500 | ISO 100"
         }
     ];
 
