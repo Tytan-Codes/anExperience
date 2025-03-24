@@ -193,7 +193,7 @@ export default function ExperienceTwo() {
             <Modal 
                 isOpen={selectedCard === 'florida'} 
                 onClose={() => setSelectedCard(null)}
-                title="Florida"
+                title="Space X Launch"
             >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     {floridaPhotos.map((photo, index) => (
@@ -217,7 +217,7 @@ export default function ExperienceTwo() {
             <Modal 
                 isOpen={selectedCard === 'vegas'} 
                 onClose={() => setSelectedCard(null)}
-                title="Vegas"
+                title="Around the world in 1 state"
             >
                 <div className="text-white/80 space-y-4 sm:space-y-6">
                     <p className="text-base sm:text-lg md:text-xl leading-relaxed">
