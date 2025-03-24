@@ -183,13 +183,13 @@ export default function ExperienceTwo() {
                         className="card w-40 sm:w-64 h-72 bg-zinc-900 rounded-lg flex items-center justify-center hover:bg-zinc-800 transition-colors duration-300 cursor-pointer"
                         onClick={() => setSelectedCard('florida')}
                     >
-                        <h2 className="text-2xl sm:text-3xl font-light text-white font-emberly tracking-wider">Florida</h2>
+                        <h2 className="text-2xl sm:text-3xl font-light text-white font-emberly tracking-wider">Space X Launch</h2>
                     </div>
                     <div 
                         className="card w-40 sm:w-64 h-72 bg-zinc-900 rounded-lg flex items-center justify-center hover:bg-zinc-800 transition-colors duration-300 cursor-pointer"
                         onClick={() => setSelectedCard('vegas')}
                     >
-                        <h2 className="text-2xl sm:text-3xl font-light text-white font-emberly tracking-wider">Vegas</h2>
+                        <h2 className="text-2xl sm:text-3xl font-light text-white font-emberly tracking-wider p-3">Around the world in 1 state</h2>
                     </div>
                 </div>
                 <div className="mt-4 sm:mt-8">
