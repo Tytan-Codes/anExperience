@@ -221,20 +221,13 @@ export default function ExperienceTwo() {
             >
                 <div className="text-white/80 space-y-4 sm:space-y-6">
                     <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        Las Vegas, a city that never sleeps, where dreams are made and fortunes are lost. 
-                        The neon lights paint the night sky in a kaleidoscope of colors, while the Strip 
-                        pulses with an energy that&apos;s uniquely its own.
+                        Las Vegas, a city that&apos;s always awake, where dreams come true or money disappears. The bright neon lights turn the night sky into a crazy mix of colors, and the Strip&apos;s got this wild energy that&apos;s totally its own.
                     </p>
                     <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        From the iconic Bellagio fountains to the grandeur of the Venetian, every corner 
-                        tells a story of excess and entertainment. The city&apos;s architecture is a testament 
-                        to human ambition, with each casino trying to outdo the next in spectacle and scale.
+                    From the famous Bellagio fountains to the big, fancy Venetian, every spot in Vegas has a story about going all out and having fun. The buildings show off how much people want to dream big, with every casino trying to be flashier and huger than the one next door.
                     </p>
                     <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        But beyond the glitz and glamour, there&apos;s a quieter side to Vegas - the local 
-                        neighborhoods, the desert landscapes, and the people who call this city home. 
-                        It&apos;s a place where reality and fantasy blur, creating an experience that&apos;s 
-                        impossible to forget.
+                        But past all the shiny, fancy stuff, Vegas has a chill side too—like the regular neighborhoods, the desert views, and the people who live there. It&apos;s a spot where real life and dream stuff mix together, making it something you can&apos;t ever forget.
                     </p>
                 </div>
             </Modal>
@@ -246,22 +239,13 @@ export default function ExperienceTwo() {
             >
                 <div className="text-white/80 space-y-4 sm:space-y-6">
                     <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        New Zealand, where nature&apos;s grandeur meets cultural richness. The land of the 
-                        long white cloud offers landscapes that seem to have been painted by the gods 
-                        themselves - from the snow-capped peaks of the Southern Alps to the pristine 
-                        beaches of the North Island.
+                        New Zealand&apos;s where epic nature hangs out with awesome culture. They call it the land of the long white cloud, and it&apos;s got views that look like the gods drew them—like the snowy tops of the Southern Alps and the super clean beaches up on the North Island.
                     </p>
                     <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        The Maori culture adds a layer of depth to this already fascinating country, 
-                        with traditions that have been preserved and celebrated for centuries. The 
-                        connection between the land and its people is palpable, creating a sense of 
-                        harmony that&apos;s rare in our modern world.
+                        The Maori culture makes this already awesome country even cooler, with old traditions they&apos;ve kept alive and loved for ages. You can totally feel how tight the people are with the land, and it&apos;s got this chill vibe you don&apos;t see much these days.
                     </p>
                     <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        Whether you&apos;re exploring the geothermal wonders of Rotorua, hiking through 
-                        the lush forests of Fiordland, or simply enjoying the laid-back atmosphere 
-                        of a local café, New Zealand offers an experience that touches the soul and 
-                        stays with you forever.
+                        Whether you&apos;re checking out the cool hot springs in Rotorua, walking through the green woods in Fiordland, or just chilling at a café, New Zealand&apos;s got stuff that hits you right in the feels and sticks with you for good.
                     </p>
                 </div>
             </Modal>
