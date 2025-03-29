@@ -140,37 +140,37 @@ export default function ExperienceTwo() {
 
     const zealandPhotos= [
         {
-            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0153.HEIC",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0153.jpeg",
             title: "Honey on a mountain",
             description: "",
             info: "Nikon D5600 | "
         },
         {
-            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0156.HEIC",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0156.jpeg",
             title: "mountain",
             description: "",
             info: "Nikon D5600 | "
         },
         {
-            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0184.HEIC",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0184.jpeg",
             title: "scienic drive",
             description: "",
             info: "Nikon D5600 | "
         },
         {
-            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0203.HEIC",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0203.jpeg",
             title: "bread",
             description: "",
             info: "Nikon D5600 | "
         },  
         {
-            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0207.HEIC",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0207.jpeg",
             title: "currious chicken ",
             description: "",
             info: "Nikon D5600 | "
         }, 
         {
-            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0224.HEIC",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0224.jpeg",
             title: "Big Head Cow",
             description: "",
             info: "Nikon D5600 | "
