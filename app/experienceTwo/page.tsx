@@ -141,7 +141,7 @@ export default function ExperienceTwo() {
 
     const vegasPhotos = [
         {
-            src: "/photos/vegas/DSC_0001.jpg",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0001.JPG",
             title: "Sign",
             description: "Its a sign",
             info: "Nikon D5600 | "
