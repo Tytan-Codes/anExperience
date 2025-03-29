@@ -106,6 +106,7 @@ const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
 
 export default function ExperienceTwo() {
     const [selectedCard, setSelectedCard] = useState<string | null>(null);
+    const [selectedPhoto, setSelectedPhoto] = useState<{src: string, title: string, description: string, info: string} | null>(null);
 
     useGSAP(() => {
         // Initial setup
@@ -244,7 +245,11 @@ export default function ExperienceTwo() {
             >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     {floridaPhotos.map((photo, index) => (
-                        <div key={index} className="relative aspect-[3/2] rounded-lg overflow-hidden">
+                        <div 
+                            key={index} 
+                            className="relative aspect-[3/2] rounded-lg overflow-hidden cursor-pointer"
+                            onClick={() => setSelectedPhoto(photo)}
+                        >
                             <Image
                                 src={photo.src}
                                 alt={photo.title}
@@ -268,7 +273,11 @@ export default function ExperienceTwo() {
             >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     {vegasPhotos.map((photo, index) => (
-                        <div key={index} className="relative aspect-[3/2] rounded-lg overflow-hidden">
+                        <div 
+                            key={index} 
+                            className="relative aspect-[3/2] rounded-lg overflow-hidden cursor-pointer"
+                            onClick={() => setSelectedPhoto(photo)}
+                        >
                             <Image
                                 src={photo.src}
                                 alt={photo.title}
@@ -300,6 +309,27 @@ export default function ExperienceTwo() {
                     <p className="text-base sm:text-lg md:text-xl leading-relaxed">
                         Whether you&apos;re checking out the cool hot springs in Rotorua, walking through the green woods in Fiordland, or just chilling at a café, New Zealand&apos;s got stuff that hits you right in the feels and sticks with you for good.
                     </p>
+                </div>
+            </Modal>
+
+            <Modal 
+                isOpen={selectedPhoto !== null} 
+                onClose={() => setSelectedPhoto(null)}
+                title={selectedPhoto?.title || ""}
+            >
+                <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden">
+                    {selectedPhoto && (
+                        <Image
+                            src={selectedPhoto.src}
+                            alt={selectedPhoto.title}
+                            fill
+                            className="object-contain"
+                        />
+                    )}
+                </div>
+                <div className="mt-4 text-white/80">
+                    <p className="text-base sm:text-lg">{selectedPhoto?.description}</p>
+                    <p className="text-sm sm:text-base mt-2 text-white/60">{selectedPhoto?.info}</p>
                 </div>
             </Modal>
         </div>
