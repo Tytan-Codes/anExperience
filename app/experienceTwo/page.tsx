@@ -181,19 +181,19 @@ export default function ExperienceTwo() {
             info: "Nikon D5600 | f/5.6 | 1/15 | ISO 3200"
         },
         {
-            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/DSC_0456.JPG",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/DSC_0456.jpg",
             title: "A Beautiful Sunset",
             description: "A beautiful picture of a sunset in Cape Canaveral",
             info: "Nikon D5600 | f/5.6 | 1/100 | ISO 1000"
         },
         {
-            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/DSC_0205.JPG",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/DSC_0205.jpg",
             title: "Solitude on a Trail",
             description: "A man stands on a rugged dirt path, gazing at the water, surrounded by lush greenery and an open sky, evoking solitude and reflection.",
             info: "Nikon D5600 | f/5.6 | 1/125 | ISO 100"
         },
         {
-            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/DSC_414.JPG",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/DSC_0414.JPG",
             title: "Launch Day",
             description: "A picture of the launch of the Space X rocket",
             info: "Nikon D5600 | f/5.6 | 1/4000 | ISO 100"
