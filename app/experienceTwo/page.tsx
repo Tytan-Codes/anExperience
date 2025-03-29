@@ -138,7 +138,44 @@ export default function ExperienceTwo() {
         })
     })
 
-
+    const zealandPhotos= [
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0153.HEIC",
+            title: "Honey on a mountain",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0156.HEIC",
+            title: "mountain",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0184.HEIC",
+            title: "scienic drive",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0203.HEIC",
+            title: "bread",
+            description: "",
+            info: "Nikon D5600 | "
+        },  
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0207.HEIC",
+            title: "currious chicken ",
+            description: "",
+            info: "Nikon D5600 | "
+        }, 
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0224.HEIC",
+            title: "Big Head Cow",
+            description: "",
+            info: "Nikon D5600 | "
+        }, 
+    ]
     const vegasPhotos = [
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0055.JPG",
@@ -347,16 +384,26 @@ export default function ExperienceTwo() {
                 onClose={() => setSelectedCard(null)}
                 title="New Zealand"
             >
-                <div className="text-white/80 space-y-4 sm:space-y-6">
-                    <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        New Zealand&apos;s where epic nature hangs out with awesome culture. They call it the land of the long white cloud, and it&apos;s got views that look like the gods drew them—like the snowy tops of the Southern Alps and the super clean beaches up on the North Island.
-                    </p>
-                    <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        The Maori culture makes this already awesome country even cooler, with old traditions they&apos;ve kept alive and loved for ages. You can totally feel how tight the people are with the land, and it&apos;s got this chill vibe you don&apos;t see much these days.
-                    </p>
-                    <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        Whether you&apos;re checking out the cool hot springs in Rotorua, walking through the green woods in Fiordland, or just chilling at a café, New Zealand&apos;s got stuff that hits you right in the feels and sticks with you for good.
-                    </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                    {zealandPhotos.map((photo, index) => (
+                        <div 
+                            key={index} 
+                            className="relative aspect-[3/2] rounded-lg overflow-hidden cursor-pointer"
+                            onClick={() => setSelectedPhoto(photo)}
+                        >
+                            <Image
+                                src={photo.src}
+                                alt={photo.title}
+                                fill
+                                className="object-cover rounded-lg"
+                            />
+                            <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3 sm:p-4">
+                                <h3 className="text-white text-lg sm:text-xl font-emberly">{photo.title}</h3>
+                                <p className="text-white/80 text-xs sm:text-sm">{photo.description}</p>
+                                <p className="text-white/60 text-[10px] sm:text-xs mt-1 sm:mt-2">{photo.info}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </Modal>
 
