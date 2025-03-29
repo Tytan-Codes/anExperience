@@ -254,7 +254,7 @@ export default function ExperienceTwo() {
                                 src={photo.src}
                                 alt={photo.title}
                                 fill
-                                className="object-cover"
+                                className="object-cover rounded-lg"
                             />
                             <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3 sm:p-4">
                                 <h3 className="text-white text-lg sm:text-xl font-emberly">{photo.title}</h3>
@@ -282,7 +282,7 @@ export default function ExperienceTwo() {
                                 src={photo.src}
                                 alt={photo.title}
                                 fill
-                                className="object-cover"
+                                className="object-cover rounded-lg"
                             />
                             <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3 sm:p-4">
                                 <h3 className="text-white text-lg sm:text-xl font-emberly">{photo.title}</h3>
@@ -323,7 +323,7 @@ export default function ExperienceTwo() {
                             src={selectedPhoto.src}
                             alt={selectedPhoto.title}
                             fill
-                            className="object-contain"
+                            className="object-contain rounded-lg"
                         />
                     )}
                 </div>
