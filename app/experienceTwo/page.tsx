@@ -141,8 +141,8 @@ export default function ExperienceTwo() {
 
     const vegasPhotos = [
         {
-            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0001.JPG",
-            title: "Sign",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0055.JPG",
+            title: "My Favorite Photo",
             description: "Its a sign",
             info: "Nikon D5600 | "
         },
@@ -169,7 +169,55 @@ export default function ExperienceTwo() {
             title: "Las Vegas Sign",
             description: "",
             info: "Nikon D5600 | "
-        }
+        },  
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0092.JPG",
+            title: "Gambler",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0039.JPG",
+            title: "Walking Man",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0050.JPG",
+            title: "Strat",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0062.JPG",
+            title: "Idk what to name",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0064.JPG",
+            title: "Idk what to name",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0068.JPG",
+            title: "Idk what to name",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0074.JPG",
+            title: "Idk what to name",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0082.JPG",
+            title: "Idk what to name",
+            description: "",
+            info: "Nikon D5600 | "
+        } 
     
     ]
 
