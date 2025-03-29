@@ -137,6 +137,41 @@ export default function ExperienceTwo() {
         })
     })
 
+
+    const vegasPhotos = [
+        {
+            src: "/photos/vegas/DSC_0001.jpg",
+            title: "Sign",
+            description: "Its a sign",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "/photos/vegas/DSC_0005.jpg",
+            title: "Injury",
+            description: "Its an injury",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "/photos/vegas/DSC_0013.jpg",
+            title: "Cool thing",
+            description: "Its a cool thing",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "/photos/vegas/DSC_0015.jpg",
+            title: "MGM",
+            description: "MGM is a casino",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "/photos/vegas/DSC_0021.jpg",
+            title: "Las Vegas Sign",
+            description: "",
+            info: "Nikon D5600 | "
+        }
+    
+    ]
+
     const floridaPhotos = [
         {
             src: "/photos/DSC_0651.jpg",
@@ -229,18 +264,24 @@ export default function ExperienceTwo() {
             <Modal 
                 isOpen={selectedCard === 'vegas'} 
                 onClose={() => setSelectedCard(null)}
-                title="Around the world in 1 state"
+                title="Around the world in 1 city"
             >
-                <div className="text-white/80 space-y-4 sm:space-y-6">
-                    <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        Las Vegas, a city that&apos;s always awake, where dreams come true or money disappears. The bright neon lights turn the night sky into a crazy mix of colors, and the Strip&apos;s got this wild energy that&apos;s totally its own.
-                    </p>
-                    <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                    From the famous Bellagio fountains to the big, fancy Venetian, every spot in Vegas has a story about going all out and having fun. The buildings show off how much people want to dream big, with every casino trying to be flashier and huger than the one next door.
-                    </p>
-                    <p className="text-base sm:text-lg md:text-xl leading-relaxed">
-                        But past all the shiny, fancy stuff, Vegas has a chill side too—like the regular neighborhoods, the desert views, and the people who live there. It&apos;s a spot where real life and dream stuff mix together, making it something you can&apos;t ever forget.
-                    </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                    {vegasPhotos.map((photo, index) => (
+                        <div key={index} className="relative aspect-[3/2] rounded-lg overflow-hidden">
+                            <Image
+                                src={photo.src}
+                                alt={photo.title}
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3 sm:p-4">
+                                <h3 className="text-white text-lg sm:text-xl font-emberly">{photo.title}</h3>
+                                <p className="text-white/80 text-xs sm:text-sm">{photo.description}</p>
+                                <p className="text-white/60 text-[10px] sm:text-xs mt-1 sm:mt-2">{photo.info}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </Modal>
 
