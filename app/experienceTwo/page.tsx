@@ -175,7 +175,7 @@ export default function ExperienceTwo() {
 
     const floridaPhotos = [
         {
-            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/DSC_0651.JPG",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/DSC_0651.jpg",
             title: "A Cool breeze",
             description: "A beautiful picture of a city at night",
             info: "Nikon D5600 | f/5.6 | 1/15 | ISO 3200"
