@@ -147,25 +147,25 @@ export default function ExperienceTwo() {
             info: "Nikon D5600 | "
         },
         {
-            src: "/photos/vegas/DSC_0005.jpg",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0005.JPG",
             title: "Injury",
             description: "Its an injury",
             info: "Nikon D5600 | "
         },
         {
-            src: "/photos/vegas/DSC_0013.jpg",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0013.JPG",
             title: "Cool thing",
             description: "Its a cool thing",
             info: "Nikon D5600 | "
         },
         {
-            src: "/photos/vegas/DSC_0015.jpg",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0015.JPG",
             title: "MGM",
             description: "MGM is a casino",
             info: "Nikon D5600 | "
         },
         {
-            src: "/photos/vegas/DSC_0021.jpg",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0021.JPG",
             title: "Las Vegas Sign",
             description: "",
             info: "Nikon D5600 | "
@@ -175,31 +175,31 @@ export default function ExperienceTwo() {
 
     const floridaPhotos = [
         {
-            src: "/photos/DSC_0651.jpg",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/DSC_0651.JPG",
             title: "A Cool breeze",
             description: "A beautiful picture of a city at night",
             info: "Nikon D5600 | f/5.6 | 1/15 | ISO 3200"
         },
         {
-            src: "/photos/DSC_0456.jpg",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/DSC_0456.JPG",
             title: "A Beautiful Sunset",
             description: "A beautiful picture of a sunset in Cape Canaveral",
             info: "Nikon D5600 | f/5.6 | 1/100 | ISO 1000"
         },
         {
-            src: "/photos/DSC_0205.jpg",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/DSC_0205.JPG",
             title: "Solitude on a Trail",
             description: "A man stands on a rugged dirt path, gazing at the water, surrounded by lush greenery and an open sky, evoking solitude and reflection.",
             info: "Nikon D5600 | f/5.6 | 1/125 | ISO 100"
         },
         {
-            src: "/photos/DSC_414.jpg",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/DSC_414.JPG",
             title: "Launch Day",
             description: "A picture of the launch of the Space X rocket",
             info: "Nikon D5600 | f/5.6 | 1/4000 | ISO 100"
         },
         {
-            src: "/photos/DSC_0213.jpg",
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/DSC_0213.JPG",
             title: "Very scary alligators",
             description: "A picture of a very scary alligator",
             info: "Nikon D5600 | f/5.6 | 1/2500 | ISO 100"
