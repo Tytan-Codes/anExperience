@@ -217,6 +217,77 @@ export default function ExperienceTwo() {
             description: "",
             info: "Nikon D5600 | "
         }, 
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0446.JPG",
+            title: "cool chicken",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0675.JPG",
+            title: "car",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0669.JPG",
+            title: "more car",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0663.JPG",
+            title: "fern",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0665.JPG",
+            title: "dad",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0665.JPG",
+            title: "GROK",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0650.JPG",
+            title: "fall",
+            description: "",
+            info: "Nikon D5600 | "
+        },        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0645.JPG",
+            title: "Me",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0633.JPG",
+            title: "view",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0631.JPG",
+            title: "view",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0630.JPG",
+            title: "fall",
+            description: "",
+            info: "Nikon D5600 | "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0627.JPG",
+            title: "fall",
+            description: "",
+            info: "Nikon D5600 | "
+        },
     ]
     const vegasPhotos = [
         {
