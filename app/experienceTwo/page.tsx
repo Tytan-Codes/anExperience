@@ -143,43 +143,43 @@ export default function ExperienceTwo() {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0153.jpeg",
             title: "Honey on a mountain",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0156.jpeg",
             title: "mountain",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0184.jpeg",
             title: "scienic drive",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0203.jpeg",
             title: "bread",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },  
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0207.jpeg",
             title: "currious chicken ",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         }, 
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/IMG_0224.jpeg",
             title: "Big Head Cow",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         }, 
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0239.JPG",
             title: "Very nice view",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         }, 
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0249.JPG",
@@ -191,102 +191,102 @@ export default function ExperienceTwo() {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0255.JPG",
             title: "Very nice view",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         }, 
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0265.JPG",
             title: "Very nice view",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         }, 
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0268.JPG",
             title: "Very nice view",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         }, 
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0356.JPG",
             title: "waterfall",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         }, 
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0365.JPG",
             title: "fall",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         }, 
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0446.JPG",
             title: "cool chicken",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0675.JPG",
             title: "car",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0669.JPG",
             title: "more car",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0663.JPG",
             title: "fern",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0665.JPG",
             title: "dad",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0665.JPG",
             title: "GROK",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0650.JPG",
             title: "fall",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         },        {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0645.JPG",
             title: "Me",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0633.JPG",
             title: "view",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0631.JPG",
             title: "view",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0630.JPG",
             title: "fall",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0627.JPG",
             title: "fall",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         },
     ]
     const vegasPhotos = [
@@ -294,79 +294,79 @@ export default function ExperienceTwo() {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0055.JPG",
             title: "My Favorite Photo",
             description: "Its a sign",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0005.JPG",
             title: "Injury",
             description: "Its an injury",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0013.JPG",
             title: "Cool thing",
             description: "Its a cool thing",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0015.JPG",
             title: "MGM",
             description: "MGM is a casino",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0021.JPG",
             title: "Las Vegas Sign",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },  
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0092.JPG",
             title: "Gambler",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0039.JPG",
             title: "Walking Man",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0050.JPG",
             title: "Strat",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0062.JPG",
             title: "Idk what to name",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0064.JPG",
             title: "Idk what to name",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0068.JPG",
             title: "Idk what to name",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600 "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0074.JPG",
             title: "Idk what to name",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         },
         {
             src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/vegas/DSC_0082.JPG",
             title: "Idk what to name",
             description: "",
-            info: "Nikon D5600 | "
+            info: "Nikon D5600  "
         } 
     
     ]
