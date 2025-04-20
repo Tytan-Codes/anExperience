@@ -495,7 +495,7 @@ export default function ExperienceTwo() {
             <Modal 
                 isOpen={selectedCard === 'newzealand'} 
                 onClose={() => setSelectedCard(null)}
-                title="New Zealand"
+                title="New Zealand (Current)"
             >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     {zealandPhotos.map((photo, index) => (
