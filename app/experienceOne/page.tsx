@@ -538,7 +538,7 @@ export default function Experience() {
                                         className="w-[300px] md:w-[500px] flex-shrink-0 aspect-[4/3] bg-zinc-900 rounded-lg overflow-hidden group relative"
                                     >
                                         <div className="w-full h-full rounded-lg transition-transform duration-500 group-hover:scale-105 flex items-center justify-center">
-                                            <p className="text-white/50">More shit photos coming soon</p>
+                                            <p className="text-white/50">More photos coming soon</p>
                                         </div>
                                     </div>
                                 ))}
