@@ -448,9 +448,9 @@ export default function Experience() {
                     </button>
                 </div>
                 <div className="flex flex-col flex-1 p-4 md:p-8 animation-8">
-                    <h2 className="text-white text-2xl md:text-4xl font-emberly mb-4">Gallary</h2>
+                    <h2 className="text-white text-2xl md:text-4xl font-emberly mb-4">Gallery</h2>
                     <p className="text-white/70 text-base md:text-xl font-emberly">
-                        Wasting Money
+                        Very Cool Photos
                     </p>
                     <button 
                         onClick={() => openModal('experience')}
