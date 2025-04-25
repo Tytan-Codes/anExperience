@@ -288,6 +288,42 @@ export default function ExperienceTwo() {
             description: "",
             info: "Nikon D5600 "
         },
+                {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0955.JPG",
+            title: "amazing view",
+            description: "",
+            info: "Nikon D5600 "
+        },
+                {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0952.JPG",
+            title: "no words",
+            description: "",
+            info: "Nikon D5600 "
+        },
+                {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0946.JPG",
+            title: "",
+            description: "",
+            info: "Nikon D5600 "
+        },
+                {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_949.JPG",
+            title: "fall",
+            description: "",
+            info: "Nikon D5600 "
+        },
+                {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0945.JPG",
+            title: "!!!",
+            description: "",
+            info: "Nikon D5600 "
+        },
+        {
+            src: "https://raw.githubusercontent.com/Tytan-Codes/anExperience/main/public/photos/zealand/DSC_0940.JPG",
+            title: "Horce",
+            description: "",
+            info: "Nikon D5600 "
+        },
     ]
     const vegasPhotos = [
         {
