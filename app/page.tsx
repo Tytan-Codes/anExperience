@@ -49,7 +49,7 @@ export default function Home() {
   const handleClick = () => {
     // Exit animation
     const tl = gsap.timeline({
-      onComplete: () => router.push('/journeyOne')
+      onComplete: () => router.push('/select')
     });
 
     // Animate out "tytan" letters
@@ -89,7 +89,7 @@ export default function Home() {
     <div className="flex flex-col bg-gradient-to-b from-zinc-950 to-zinc-800 w-full h-screen">
       <div className="flex flex-row w-full h-1/6">s</div>
       <div className="flex flex-row w-full h-2/6 items-center pl-[5vw] font-width-extended tracking-widest">
-        {['e', 'd', 'w', 'a', 'r','d'].map((letter, index) => (
+        {['t', 'y', 't', 'a', 'n'].map((letter, index) => (
           <span
             key={`tytan-${index}`}
             ref={(el) => addToRefs(el, letterRefs.tytan)}
@@ -100,7 +100,7 @@ export default function Home() {
         ))}
       </div>
       <div className="flex flex-row w-full h-2/6 justify-end pr-[5vw] items-center font-width-extended tracking-widest font-emberly">
-        {['w', 'i', 'l', 's', 'o','n'].map((letter, index) => (
+        {['c', 'o', 'd', 'e', 's'].map((letter, index) => (
           <span
             key={`codes-${index}`}
             ref={(el) => addToRefs(el, letterRefs.codes)}
@@ -115,7 +115,7 @@ export default function Home() {
           onClick={handleClick}
           className="select-button mt-4 inline-block border font-emberly italic text-[1.5rem] border-white px-8 py-2 tracking-wider transition-colors hover:bg-zinc-400 hover:text-white text-white"
         >
-          Start journey
+          Select experience
         </button>
       </div>
     </div>
