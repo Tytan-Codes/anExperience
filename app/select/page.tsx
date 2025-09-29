@@ -73,8 +73,8 @@ export default function Select() {
                         <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-emberly relative z-10">Portfolio</h1>
                     </div>
                     
-                    <div onClick={() => handleNavigation("/experienceTwo")} className="box-2 w-full sm:w-[400px] md:w-[500px] lg:w-[600px] h-[200px] sm:h-[250px] md:h-[300px] bg-zinc-950/90 border border-white/20 rounded-lg flex items-center justify-center cursor-pointer transition-colors hover:bg-zinc-900/90">
-                        <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-emberly relative z-10">photo essays</h1>
+                    <div onClick={() => handleNavigation("https://photostudio.tytan.dev")} className="box-2 w-full sm:w-[400px] md:w-[500px] lg:w-[600px] h-[200px] sm:h-[250px] md:h-[300px] bg-zinc-950/90 border border-white/20 rounded-lg flex items-center justify-center cursor-pointer transition-colors hover:bg-zinc-900/90">
+                        <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-emberly relative z-10">photo studio</h1>
                     </div>
                 </div>
             </div>
